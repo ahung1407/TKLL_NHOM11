@@ -1,0 +1,292 @@
+
+*** Running vivado
+    with args -log RISC_CPU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISC_CPU.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Dec  1 17:22:24 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source RISC_CPU.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 531.742 ; gain = 202.082
+Command: synth_design -top RISC_CPU -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36700
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1408.809 ; gain = 445.957
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'SKZ', assumed default net type 'wire' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RISC_CPU' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v:21]
+INFO: [Synth 8-6157] synthesizing module 'addr_mux' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr_mux' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:23]
+INFO: [Synth 8-3876] $readmem data file 'instruction_file.mem' is read successfully [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Register' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Register' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v:22]
+INFO: [Synth 8-6157] synthesizing module 'dataMemory' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:23]
+INFO: [Synth 8-3876] $readmem data file 'data_init.mem' is read successfully [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'dataMemory' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Accumulator_Register' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Accumulator_Register' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:23]
+INFO: [Synth 8-226] default block is never used [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:23]
+WARNING: [Synth 8-7071] port 'signal' of module 'Controller' is unconnected for instance 'CTRL' [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:92]
+WARNING: [Synth 8-7023] instance 'CTRL' of module 'Controller' has 17 connections declared, but only 16 given [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'RISC_CPU' (0#1) [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:1]
+WARNING: [Synth 8-6014] Unused sequential element mux_select_reg was removed.  [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:68]
+WARNING: [Synth 8-6014] Unused sequential element instruction_mem_read_reg was removed.  [D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1519.820 ; gain = 556.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1519.820 ; gain = 556.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1519.820 ; gain = 556.969
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1519.820 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Minh_Hung/digilent-xdc-master/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [D:/Minh_Hung/digilent-xdc-master/Arty-Z7-20-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1617.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1617.160 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                             0000
+                   FETCH |                              001 |                             0001
+                  DECODE |                              010 |                             0010
+                    HALT |                              011 |                             0111
+              MEM_ACCESS |                              100 |                             0100
+                 EXECUTE |                              101 |                             0011
+                  BRANCH |                              110 |                             0110
+              WRITE_BACK |                              111 |                             0101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---RAMs : 
+	              256 Bit	(32 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 3     
+	   8 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_16) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_17) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_18) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_19) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_20) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_21) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_22) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (ALU_result_regi_23) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_state_reg[2]) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_state_reg[1]) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_state_reg[0]) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_next_state_reg[2]) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_next_state_reg[1]) is unused and will be removed from module RISC_CPU.
+WARNING: [Synth 8-3332] Sequential element (CTRL/FSM_sequential_next_state_reg[0]) is unused and will be removed from module RISC_CPU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------------+------------+---------------+----------------+
+|Module Name       | RTL Object | Depth x Width | Implemented As | 
++------------------+------------+---------------+----------------+
+|instructionMemory | Imem       | 32x7          | LUT            | 
+|RISC_CPU          | p_0_out    | 32x7          | LUT            | 
++------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1617.160 ; gain = 556.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1617.160 ; gain = 654.309
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1617.160 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1617.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 43592425
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:38 . Memory (MB): peak = 1617.160 ; gain = 1085.418
+INFO: [Common 17-1381] The checkpoint 'D:/Minh_Hung/doan/project_ANH_NGHI.runs/synth_1/RISC_CPU.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file RISC_CPU_utilization_synth.rpt -pb RISC_CPU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 17:23:10 2024...

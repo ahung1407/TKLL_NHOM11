@@ -36,7 +36,8 @@ module Controller(
     output reg alu_enable,          // Kích hoạt ALU
     output reg acc_write,           // Ghi kết quả vào Accumulator
     output reg acc_read,
-    output reg [3:0] state        // Trạng thái Controller
+    output reg [3:0] state,        // Trạng thái Controller
+    output reg SKZ
     );
         // Định nghĩa trạng thái
     localparam IDLE        = 4'b0000,
@@ -59,7 +60,7 @@ module Controller(
     end
 
     // Logic điều khiển
-    always @(*) begin
+    always @(posedge clk) begin
         // Mặc định tắt tất cả tín hiệu điều khiển
         pc_enable = 0;
         pc_select = 0;
@@ -73,6 +74,7 @@ module Controller(
         acc_write = 0;
         acc_read = 0;
         next_state = IDLE;
+        SKZ=0;
 
         case (state)
             IDLE: begin
@@ -101,7 +103,10 @@ module Controller(
                 acc_read = 1;
                 data_mem_read = 1;
                 alu_enable = 1;        // Kích hoạt ALU
-                if(opcode == 3'b001) next_state = BRANCH;
+                if(opcode == 3'b001) begin
+                next_state = BRANCH;
+                SKZ=1;
+                end
                else next_state = WRITE_BACK;
             end
             MEM_ACCESS: begin

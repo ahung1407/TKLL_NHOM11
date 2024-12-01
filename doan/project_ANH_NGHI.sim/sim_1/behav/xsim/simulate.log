@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+Kiểm tra 1: ADD và tăng PC
+PC_out =  1, ALU_result =   0, is_zero = 1
+Kiểm tra 2: SKZ và load PC
+PC_out =  3, ALU_result = zzzzzzzz, is_zero = 0
+Kiểm tra 2: SKZ và load PC
+PC_out =  4, ALU_result = zzzzzzzz, is_zero = 0
+Kiểm tra 3: XOR và kiểm tra is_zero
+PC_out =  5, ALU_result = 11100000, is_zero = 0
+PC_out =  5, ALU_result = 11100000, is_zero = 0
+$stop called at time : 50 ns : File "D:/Minh_Hung/doan/project_ANH_NGHI.srcs/sim_1/new/Program_Counter_ALU_tb.v" Line 124
