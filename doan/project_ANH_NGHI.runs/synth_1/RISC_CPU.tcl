@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -98,6 +99,8 @@ read_xdc D:/Minh_Hung/digilent-xdc-master/Arty-Z7-20-Master.xdc
 set_property used_in_implementation false [get_files D:/Minh_Hung/digilent-xdc-master/Arty-Z7-20-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/Minh_Hung/doan/project_ANH_NGHI.srcs/utils_1/imports/synth_1/RISC_CPU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

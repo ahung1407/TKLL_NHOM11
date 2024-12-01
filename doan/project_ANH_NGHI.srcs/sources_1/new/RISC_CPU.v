@@ -1,7 +1,8 @@
 module RISC_CPU (
-    input wire clk,                  // Clock signal
-    input wire rst                   // Synchronous reset signal
+    input wire clk,               // Clock signal
+    input wire rst                // Reset signal
 );
+
     // Internal wires and registers
     wire [4:0] program_counter_out;    // Program Counter output
     wire [4:0] operand_address_out;    // Operand Address output from addr_mux
@@ -12,16 +13,17 @@ module RISC_CPU (
     wire [7:0] alu_result;             // Result from ALU
     wire is_zero;                      // Zero flag from ALU
     wire [7:0] accumulator_out;        // Output from Accumulator Register
-    wire [7:0] alu_operand;            // Operand input for ALU
     wire [4:0] instruction_address;    // Address for Instruction Memory
+    wire [7:0] alu_operand;            // Operand input for ALU
 
-    // Control signals from the controller
+    // Control signals from Controller
     wire pc_enable, pc_select;
     wire mux_select, alu_enable;
     wire acc_write, acc_read;
     wire data_mem_read, data_mem_write;
     wire instruction_mem_read;
     wire load_ir;
+    wire SKZ;
 
     // Instantiate Program Counter
     Program_Counter PC (
@@ -108,7 +110,7 @@ module RISC_CPU (
         .SKZ(SKZ)
     );
 
-    // Additional logic
-    // Connect the outputs of the Controller to the appropriate modules
-    assign alu_operand = (data_mem_read) ? memory_data : 8'b0;  // ALU operand selection
+    // Additional connections
+    assign alu_operand = (data_mem_read) ? memory_data : 8'b0;
+
 endmodule
