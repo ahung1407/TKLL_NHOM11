@@ -1,6 +1,26 @@
 module RISC_CPU (
     input wire clk,               // Clock signal
-    input wire rst                // Reset signal
+    input wire rst,               // Reset signal
+
+    // Outputs for observation
+    output wire [4:0] program_counter_out,  // Program Counter output
+    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
+    output wire [7:0] instruction,          // Instruction from Instruction Memory
+    output wire [2:0] opcode,               // Opcode from Instruction Register
+    output wire [4:0] operand_address,      // Operand address from Instruction Register
+    output wire [7:0] memory_data,          // Data read from Data Memory
+    output wire [7:0] alu_result,           // Result from ALU
+    output wire is_zero,                    // Zero flag from ALU
+    output wire [7:0] accumulator_out,      // Output from Accumulator Register
+
+    // Control signals for observation
+    output wire pc_enable,
+    output wire mux_select,
+    output wire load_register,
+    output wire wr_en,
+    output wire load_ir,
+    output wire SKZ,
+    output wire JUMP
 );
 
     // Internal wires and registers
@@ -25,16 +45,6 @@ module RISC_CPU (
     wire JUMP;
 
     // Instantiate Program Counter
-    Program_Counter PC (
-        .clk(clk),
-        .reset(rst),
-        .pc_enable(pc_enable),
-        .PC_jump_addr(operand_address_out),
-        .PC_out(program_counter_out),
-        .iszero(is_zero),
-        .SKZ(SKZ),
-        .JUMP(JUMP)
-    );
 
     // Instantiate Address MUX
     addr_mux AMUX (
@@ -104,6 +114,15 @@ module RISC_CPU (
         .SKZ(SKZ),
         .JUMP(JUMP)
     );
-
+     Program_Counter PC (
+        .clk(clk),
+        .reset(rst),
+        .pc_enable(pc_enable),
+        .PC_jump_addr(operand_address_out),
+        .PC_out(program_counter_out),
+        .iszero(is_zero),
+        .SKZ(SKZ),
+        .JUMP(JUMP)
+    );
 
 endmodule

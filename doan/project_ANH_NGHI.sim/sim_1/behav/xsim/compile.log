@@ -1,20 +1,36 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Accumulator_Register
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Controller
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Instruction_Register
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Program_Counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RISC_CPU
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v" into library xil_defaultlib
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'program_counter_out' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:27]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'operand_address_out' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:28]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'instruction' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:29]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'opcode' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:30]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'operand_address' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:31]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'memory_data' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:32]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'alu_result' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:33]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'is_zero' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:34]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'accumulator_out' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:35]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'pc_enable' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:39]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'mux_select' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:40]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'load_register' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:41]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'wr_en' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:42]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'load_ir' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:43]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'SKZ' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:44]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'JUMP' is not allowed [D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:45]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module addr_mux
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module instructionMemory
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/TKLL_NHOM11/doan/project_ANH_NGHI.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RISC_CPU_tb

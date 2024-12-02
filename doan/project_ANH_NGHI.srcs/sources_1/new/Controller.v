@@ -58,24 +58,31 @@ module Controller(
 //        reg [3:0] next_state;
 
     // Chuyển trạng thái
-    always @(posedge clk ) begin
-        if (rst)
-            state <= IDLE;
-        else
-            state <= next_state;
+   always @(posedge clk) begin
+    if (rst) begin
+        // Reset state và các tín hiệu điều khiển
+        state <= IDLE;
+        next_state <= IDLE;       // Đặt trạng thái tiếp theo về IDLE
+        pc_enable <= 0;           // Reset tín hiệu enable của Program Counter
+        mux_select <= 0;          // Reset tín hiệu chọn MUX
+        wr_en <= 0;               // Reset tín hiệu ghi bộ nhớ
+        load_ir <= 0;             // Reset tín hiệu tải Instruction Register
+        load_register <= 0;       // Reset tín hiệu tải Accumulator Register
+        SKZ <= 0;                 // Reset tín hiệu Skip Zero
+        JUMP <= 0;                // Reset tín hiệu Jump
+    end else begin
+        // Chuyển sang trạng thái tiếp theo
+        state <= next_state;
+        
+        // Các điều khiển khác có thể cập nhật ở đây
+        // Tùy vào logic của `next_state`, các tín hiệu điều khiển sẽ thay đổi
     end
+end
 
     // Logic điều khiển
     always @(posedge clk) begin
         // Giá trị mặc định
-        pc_enable <= 0;
-        mux_select <= 0;
-        wr_en <= 0;
-        load_ir <= 0;
-        load_register <= 0;
-        SKZ <= 0;
-        JUMP <= 0;
-        next_state <= IDLE;
+      
     
         case (state)
             IDLE: begin
@@ -87,10 +94,11 @@ module Controller(
             FETCH: begin
                 $display("FETCH");
                 $display("Controller.v : %b", pc_enable);
+                pc_enable = 0;
                 mux_select <= 1;
                 load_ir <= 1;
                 next_state <= DECODE;
-                pc_enable <= 0;
+                
             end
             DECODE: begin
                 $display("DECODE");
