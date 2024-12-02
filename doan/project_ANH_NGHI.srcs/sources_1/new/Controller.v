@@ -26,20 +26,26 @@ module Controller(
     input wire [2:0] opcode,        // Opcode từ Instruction Register
     input wire is_zero,             // Tín hiệu Zero từ ALU
     output reg pc_enable,           // Điều khiển Program Counter
-    output reg pc_select,
-    output reg signal,
+ //   output reg pc_select,
+   // output reg signal,
     output reg mux_select,          // Điều khiển Address Mux
-    output reg data_mem_read,            // Điều khiển đọc Memory
-    output reg data_mem_write,           // Điều khiển ghi Memory
-    output reg instruction_mem_read,
+  //  output reg data_mem_read,            // Điều khiển đọc Memory
+   // output reg data_mem_write,           // Điều khiển ghi Memory
+   // output reg instruction_mem_read,
     output reg load_ir,             // Điều khiển nạp Instruction Register
-    output reg alu_enable,          // Kích hoạt ALU
-    output reg acc_write,           // Ghi kết quả vào Accumulator
-    output reg acc_read,
-    output reg [3:0] state,        // Trạng thái Controller
-    output reg SKZ
+  //  output reg alu_enable,          // Kích hoạt ALU
+  //  output reg acc_write,           // Ghi kết quả vào Accumulator
+ //   output reg acc_read,
+//    output reg [3:0] state ,       // Trạng thái Controller
+    output reg SKZ,
+    output reg wr_en,
+    output reg load_register,
+    output reg JUMP
     );
         // Định nghĩa trạng thái
+        reg [3:0] state;
+        reg signal;
+        reg [3:0] next_state;
     localparam IDLE        = 4'b0000,
                FETCH       = 4'b0001,
                DECODE      = 4'b0010,
@@ -48,8 +54,8 @@ module Controller(
                WRITE_BACK  = 4'b0101,
                BRANCH      = 4'b0110,  // Thêm trạng thái BRANCH
                HALT        = 4'b0111;
-
-    reg [3:0] next_state;
+//       reg signal;
+//        reg [3:0] next_state;
 
     // Chuyển trạng thái
     always @(posedge clk ) begin
@@ -63,32 +69,37 @@ module Controller(
     always @(posedge clk) begin
         // Mặc định tắt tất cả tín hiệu điều khiển
         pc_enable = 0;
-        pc_select = 0;
+      //  pc_select = 0;
         signal = 0;
         mux_select = 0;
-        data_mem_read = 0;
-        data_mem_write = 0;
-        instruction_mem_read = 0;
+      //  data_mem_read = 0;
+      //  data_mem_write = 0;
+        wr_en=0;
+    //    instruction_mem_read = 0;
         load_ir = 0;
-        alu_enable = 0;
-        acc_write = 0;
-        acc_read = 0;
+     //   alu_enable = 0;
+ //       acc_write = 0;
+ //       acc_read = 0;
+        load_register=0;
         next_state = IDLE;
         SKZ=0;
+        JUMP=0;
 
         case (state)
             IDLE: begin
                 pc_enable = 0;
                 next_state = FETCH;
+                mux_select = 1;
             end
             FETCH: begin
-                pc_enable = 1;         // Tăng PC
-                mux_select = 1;        // Lấy địa chỉ từ PC
-             instruction_mem_read = 1;          // Đọc lệnh từ Memory
+                pc_enable = 0;         // Tăng PC
+                mux_select = 1;      // Lấy địa chỉ từ PC
+          //   instruction_mem_read = 1;          // Đọc lệnh từ Memory
+                load_ir = 1;           // Nạp lệnh vào Instruction Register
                 next_state = DECODE;
             end
             DECODE: begin
-                load_ir = 1;           // Nạp lệnh vào Instruction Register
+//                load_ir = 1;           // Nạp lệnh vào Instruction Register
                 case (opcode)
                     3'b000: next_state = HALT;        // Opcode HLT
                     3'b111: next_state = BRANCH;     // Opcode ALU
@@ -100,9 +111,11 @@ module Controller(
             end
             EXECUTE: begin
                 mux_select = 0;
-                acc_read = 1;
-                data_mem_read = 1;
-                alu_enable = 1;        // Kích hoạt ALU
+               // load_ir = 1;
+               // acc_read = 1;
+               load_register = 0; //doc 0
+                wr_en = 0;
+              //  alu_enable = 1;        // Kích hoạt ALU
                 if(opcode == 3'b001) begin
                 next_state = BRANCH;
                 SKZ=1;
@@ -110,27 +123,34 @@ module Controller(
                else next_state = WRITE_BACK;
             end
             MEM_ACCESS: begin
-                if (opcode == 3'b101) data_mem_read =1;
-                else   data_mem_write = 1;
+                if (opcode == 3'b101) wr_en =0;
+                else   wr_en = 1;
                 next_state = WRITE_BACK;
             end
             WRITE_BACK: begin
-               if (opcode == 3'b101) begin
+               if (opcode == 3'b101) begin //LOAD
                    signal=0;
-                   acc_write=1;
+                   load_register=1;
+                   wr_en=0;
                end
-               else if(opcode == 3'b110) acc_read=1;
+               else if(opcode == 3'b110) begin //STR
+                   load_register=0;
+                   wr_en=1;
+               end
                else begin
                    signal=1;
-                   acc_write=1;
+                   load_register=1;
                end
+               pc_enable=1;
                next_state = FETCH;
             end
             BRANCH: begin
-            if(opcode == 001)begin
-                if (is_zero) pc_select = 1;    
-            end
-            else pc_select = 1;
+//            if(opcode == 001)begin
+//                if (is_zero) SKZ = 1;  
+//                else SKZ=0;  
+//            end
+                SKZ=0;
+                JUMP=1;
                 next_state = FETCH;    // Quay lại vòng lặp
             end
             HALT: begin

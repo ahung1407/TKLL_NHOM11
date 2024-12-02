@@ -21,34 +21,34 @@
 module Program_Counter (
     input clk,                  // Clock signal to synchronize the counter
     input reset,                // Synchronous reset signal, active-high
-    input load,
+    input pc_enable,
     input iszero,
     input SKZ,                 // Load signal: when high, the counter loads PC_LOAD
-    input [4:0] PC_LOAD,        // Value to load into the counter if load is high
+    input JUMP,
+    input [4:0] PC_jump_addr,        // Value to load into the counter if load is high
     output reg [4:0] PC_out     // Program counter input/output value
 );
 
-    wire [4:0] PC_plus_1;       // Output of the adder
-    wire [4:0] mux_out;         // Output of the MUX
+  //  wire [4:0] PC_new;       // Output of the adder
 
-    // Adder to calculate PC + 1
-    assign PC_plus_1 = PC_out + 5'b00001;  // Increment PC_out by 1
-
-    // 2:1 MUX to select between load value or incremented value
-    assign mux_out = (load) ? PC_LOAD : PC_plus_1;     
-    // JUMP PC_LOAD có tồn tại
-    // LOAD//
-    // Update PC_out based on reset, clk, and mux_out
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             // When reset is activated, set PC_out to 0
             PC_out <= 5'b00000;
-        end else begin
-            // Otherwise, assign mux_out value to PC_out
-            PC_out <=  (iszero==1 && SKZ==1) ? (PC_out + 5'b00010) : mux_out;
-//            if(iszero==1) begin
-//            iszero <= 0;
-//            end
+        end 
+        else begin
+            if (pc_enable) begin
+                if (SKZ && iszero) begin
+                    PC_out <= PC_out + 5'b00010;
+                end
+                else if (JUMP) begin
+                    PC_out <= PC_jump_addr;
+                end
+                else 
+                    PC_out <= PC_out + 5'b00001;
+            end
+            else 
+                PC_out <= PC_out;
         end
     end
 

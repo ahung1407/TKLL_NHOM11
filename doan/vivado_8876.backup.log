@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Mon Dec  2 09:32:59 2024
-# Process ID: 1940
+# Start of session at: Sun Dec  1 17:58:36 2024
+# Process ID: 8876
 # Current directory: F:/RISC/TKLL_NHOM11/doan
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11204 F:\RISC\TKLL_NHOM11\doan\project_ANH_NGHI.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13160 F:\RISC\TKLL_NHOM11\doan\project_ANH_NGHI.xpr
 # Log file: F:/RISC/TKLL_NHOM11/doan/vivado.log
 # Journal file: F:/RISC/TKLL_NHOM11/doan\vivado.jou
 # Running On        :DuyKhiem
@@ -19,7 +19,7 @@
 # Host memory       :16948 MB
 # Swap memory       :4294 MB
 # Total Virtual     :21243 MB
-# Available Virtual :12718 MB
+# Available Virtual :9193 MB
 #-----------------------------------------------------------
 start_gui
 open_project F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.xpr
@@ -84,11 +84,15 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at F:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at F:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at F:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'D:/Minh_Hung/doan' since last save.
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file 'F:/RISC/TKLL_NHOM11/digilent-xdc-master/Arty-Z7-20-Master.xdc'.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'F:/RISC/TKLL_NHOM11/digilent-xdc-master/Arty-Z7-20-Master.xdc', nor could it be found using path 'D:/Minh_Hung/digilent-xdc-master/Arty-Z7-20-Master.xdc'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2024.1/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1548.227 ; gain = 473.773
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1544.102 ; gain = 442.344
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  1 18:00:43 2024...

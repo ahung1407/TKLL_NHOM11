@@ -31,7 +31,6 @@ module RISC_CPU_tb;
         #1000;
 
         // Finish simulation
-        $finish;
     end
 
     // Monitor outputs and states
@@ -41,8 +40,9 @@ module RISC_CPU_tb;
 //        $dumpvars(0, RISC_CPU_tb);
         
         // Monitor important signals
-        $monitor("Time: %0t | PC_out: %0d | Opcode: %b | Operand: %b | Accumulator: %0d | ALU_Result: %0d",
-                 $time, uut.program_counter_out, uut.opcode, uut.operand_address, uut.accumulator_out, uut.alu_result);
+        $monitor("Time: %0t | PC_out: %0d | Opcode: %b | Operand: %b | Accumulator: %0d | ALU_Result: %0d | instruc: %h | data: %h | wr_en: %b |operand_address: %d | operand_address_out: %d | mux_select: %b | pc_enable: %b ",
+                 $time, uut.program_counter_out, uut.opcode, uut.operand_address, uut.accumulator_out, uut.alu_result, uut.instruction,
+                 uut.memory_data, uut.wr_en, uut.operand_address, uut.operand_address_out, uut.mux_select, uut.pc_enable);
     end
 
     // Load memory files

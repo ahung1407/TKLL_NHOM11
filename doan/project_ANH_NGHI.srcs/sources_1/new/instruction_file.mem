@@ -1,5 +1,4 @@
-00000000  // NO-OP
 01000101  // ADD (Opcode 010) with operand at address 5
 01100110  // AND (Opcode 011) with operand at address 6
 10000111  // XOR (Opcode 100) with operand at address 7
-00000000  // HALT (Opcode 000)
+

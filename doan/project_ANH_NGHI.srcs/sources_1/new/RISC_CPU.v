@@ -14,26 +14,26 @@ module RISC_CPU (
     wire is_zero;                      // Zero flag from ALU
     wire [7:0] accumulator_out;        // Output from Accumulator Register
     wire [4:0] instruction_address;    // Address for Instruction Memory
-    wire [7:0] alu_operand;            // Operand input for ALU
 
     // Control signals from Controller
-    wire pc_enable, pc_select;
-    wire mux_select, alu_enable;
-    wire acc_write, acc_read;
-    wire data_mem_read, data_mem_write;
-    wire instruction_mem_read;
+    wire pc_enable;
+    wire mux_select;
+    wire load_register;
+    wire wr_en;
     wire load_ir;
     wire SKZ;
+    wire JUMP;
 
     // Instantiate Program Counter
     Program_Counter PC (
         .clk(clk),
         .reset(rst),
-        .load(pc_select),
-        .PC_LOAD(operand_address),
+        .pc_enable(pc_enable),
+        .PC_jump_addr(operand_address_out),
         .PC_out(program_counter_out),
         .iszero(is_zero),
-        .SKZ(SKZ)
+        .SKZ(SKZ),
+        .JUMP(JUMP)
     );
 
     // Instantiate Address MUX
@@ -68,14 +68,14 @@ module RISC_CPU (
         .clk(clk),
         .addr(operand_address_out),
         .data(memory_data),
-        .wr_en(data_mem_write)
+        .wr_en(wr_en)
     );
 
     // Instantiate Accumulator Register
     Accumulator_Register ACC (
         .clk(clk),
         .reset(rst),
-        .load_register(acc_write),
+        .load_register(load_register),
         .data_in(alu_result),
         .data_out(accumulator_out)
     );
@@ -97,20 +97,13 @@ module RISC_CPU (
         .opcode(opcode),
         .is_zero(is_zero),
         .pc_enable(pc_enable),
-        .pc_select(pc_select),
         .mux_select(mux_select),
-        .data_mem_read(data_mem_read),
-        .data_mem_write(data_mem_write),
-        .instruction_mem_read(instruction_mem_read),
+        .wr_en(wr_en),
         .load_ir(load_ir),
-        .alu_enable(alu_enable),
-        .acc_write(acc_write),
-        .acc_read(acc_read),
-        .state(),
-        .SKZ(SKZ)
+        .load_register(load_register),
+        .SKZ(SKZ),
+        .JUMP(JUMP)
     );
 
-    // Additional connections
-    assign alu_operand = (data_mem_read) ? memory_data : 8'b0;
 
 endmodule
