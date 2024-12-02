@@ -67,97 +67,81 @@ module Controller(
 
     // Logic điều khiển
     always @(posedge clk) begin
-        // Mặc định tắt tất cả tín hiệu điều khiển
-        pc_enable = 0;
-      //  pc_select = 0;
-        signal = 0;
-        mux_select = 0;
-      //  data_mem_read = 0;
-      //  data_mem_write = 0;
-        wr_en=0;
-    //    instruction_mem_read = 0;
-        load_ir = 0;
-     //   alu_enable = 0;
- //       acc_write = 0;
- //       acc_read = 0;
-        load_register=0;
-        next_state = IDLE;
-        SKZ=0;
-        JUMP=0;
-
+        // Giá trị mặc định
+        pc_enable <= 0;
+        mux_select <= 0;
+        wr_en <= 0;
+        load_ir <= 0;
+        load_register <= 0;
+        SKZ <= 0;
+        JUMP <= 0;
+        next_state <= IDLE;
+    
         case (state)
             IDLE: begin
-                pc_enable = 0;
-                next_state = FETCH;
-                mux_select = 1;
+                $display("IDLE");
+                pc_enable <= 0;
+                next_state <= FETCH;
+                mux_select <= 1;
             end
             FETCH: begin
-                pc_enable = 0;         // Tăng PC
-                mux_select = 1;      // Lấy địa chỉ từ PC
-          //   instruction_mem_read = 1;          // Đọc lệnh từ Memory
-                load_ir = 1;           // Nạp lệnh vào Instruction Register
-                next_state = DECODE;
+                $display("FETCH");
+                $display("Controller.v : %b", pc_enable);
+                mux_select <= 1;
+                load_ir <= 1;
+                next_state <= DECODE;
+                pc_enable <= 0;
             end
             DECODE: begin
-//                load_ir = 1;           // Nạp lệnh vào Instruction Register
+                $display("DECODE");
                 case (opcode)
-                    3'b000: next_state = HALT;        // Opcode HLT
-                    3'b111: next_state = BRANCH;     // Opcode ALU
-                    3'b101: next_state = MEM_ACCESS;  // Opcode Memory Access
-                    3'b110: next_state = MEM_ACCESS; 
-                    3'b001,3'b010, 3'b011, 3'b100: next_state = EXECUTE; // Các opcode thực thi
-                    default: next_state = IDLE;       // Lỗi
+                    3'b000: next_state <= HALT;
+                    3'b111: next_state <= BRANCH;
+                    3'b101, 3'b110: next_state <= MEM_ACCESS;
+                    3'b001, 3'b010, 3'b011, 3'b100: next_state <= EXECUTE;
+                    default: next_state <= IDLE;
                 endcase
             end
             EXECUTE: begin
-                mux_select = 0;
-               // load_ir = 1;
-               // acc_read = 1;
-               load_register = 0; //doc 0
-                wr_en = 0;
-              //  alu_enable = 1;        // Kích hoạt ALU
-                if(opcode == 3'b001) begin
-                next_state = BRANCH;
-                SKZ=1;
+                $display("EXCUTE");
+                mux_select <= 0;
+                if (opcode == 3'b001) begin
+                    SKZ <= 1;
+                    next_state <= BRANCH;
+                end else begin
+                    next_state <= WRITE_BACK;
                 end
-               else next_state = WRITE_BACK;
             end
             MEM_ACCESS: begin
-                if (opcode == 3'b101) wr_en =0;
-                else   wr_en = 1;
-                next_state = WRITE_BACK;
+                $display("MEM_ACCESS");
+                if (opcode == 3'b101)
+                    wr_en <= 0;
+                else
+                    wr_en <= 1;
+                next_state <= WRITE_BACK;
             end
             WRITE_BACK: begin
-               if (opcode == 3'b101) begin //LOAD
-                   signal=0;
-                   load_register=1;
-                   wr_en=0;
-               end
-               else if(opcode == 3'b110) begin //STR
-                   load_register=0;
-                   wr_en=1;
-               end
-               else begin
-                   signal=1;
-                   load_register=1;
-               end
-               pc_enable=1;
-               next_state = FETCH;
+                $display("WRITE_BACK");
+                if (opcode == 3'b101) begin
+                    load_register <= 1;
+                end else if (opcode == 3'b110) begin
+                    wr_en <= 1;
+                end else begin
+                    load_register <= 1;
+                end
+                pc_enable <= 1;
+                next_state <= FETCH;
             end
             BRANCH: begin
-//            if(opcode == 001)begin
-//                if (is_zero) SKZ = 1;  
-//                else SKZ=0;  
-//            end
-                SKZ=0;
-                JUMP=1;
-                next_state = FETCH;    // Quay lại vòng lặp
+                $display("BRANCH");
+                JUMP <= 1;
+                next_state <= FETCH;
             end
             HALT: begin
-                pc_enable = 0;         // Dừng PC
-                next_state = HALT;     // Giữ trạng thái HALT
+                $display("HALT");
+                next_state <= HALT;
             end
-            default: next_state = IDLE;
+            default: next_state <= IDLE;
         endcase
     end
 endmodule

@@ -38,6 +38,7 @@ module Program_Counter (
         end 
         else begin
             if (pc_enable) begin
+                $display("PC.v: %b",pc_enable);
                 if (SKZ && iszero) begin
                     PC_out <= PC_out + 5'b00010;
                 end

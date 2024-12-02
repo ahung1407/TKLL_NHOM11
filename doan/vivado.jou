@@ -23,3 +23,16 @@
 #-----------------------------------------------------------
 start_gui
 open_project F:/RISC/TKLL_NHOM11/doan/project_ANH_NGHI.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
