@@ -35,6 +35,7 @@ module instructionMemory(
     end
     // Synchronous read logic
     always @(posedge clk) begin
+          $display("IM_PC");
         instruct <= Imem[addr];
     end
 

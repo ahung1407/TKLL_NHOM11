@@ -8,9 +8,10 @@ module Program_Counter (
     input wire [4:0] PC_jump_addr,  // Target address for jump
     output reg [4:0] PC_out         // Program counter output value
 );
-
+    
     // Always block triggered on rising edge of clock or reset
     always @(posedge clk or posedge reset) begin
+       $display("run_PC");
         if (reset) begin
             // Reset the program counter to 0
             PC_out <= 5'b00000;
@@ -26,7 +27,7 @@ module Program_Counter (
                 PC_out <= PC_jump_addr;
             end else begin
                 // Default increment by 1 for normal instruction execution
-                PC_out <= PC_out + 5'b00001;
+                PC_out = PC_out + 5'b00001;
             end
         end
         // If pc_enable is low, the program counter holds its value

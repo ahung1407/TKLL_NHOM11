@@ -9,6 +9,7 @@ module ALU(
     // Always block to handle ALU operation and check for zero result
     always @(posedge clk) begin
         // Execute operation based on opcode
+          $display("run_ALU");
         case (opcode)
             3'b010: ALU_result = accumulator + inB;  // ADD
             3'b011: ALU_result = accumulator & inB;  // AND

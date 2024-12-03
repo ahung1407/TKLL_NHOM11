@@ -29,10 +29,11 @@ module Accumulator_Register (
 
     // Hoạt động khi có cạnh dương của clk hoặc tín hiệu reset
     always @(posedge clk or posedge reset) begin
+      $display("ACCRES_PC");
         if (reset) begin
             data_out <= 8'b0000_0000;  // Đặt thanh ghi về 0 khi reset
         end else if (load_register) begin
-            data_out <= data_in;       // Ghi giá trị data_in vào data_out khi load_register được bật
+            data_out = data_in;       // Ghi giá trị data_in vào data_out khi load_register được bật
         end
         // Nếu load_register = 0, giữ nguyên giá trị hiện tại của data_out
     end

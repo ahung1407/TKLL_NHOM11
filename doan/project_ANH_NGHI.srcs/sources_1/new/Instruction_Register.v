@@ -30,10 +30,11 @@ module Instruction_Register (
 
     // Process triggered by clock or reset
     always @(posedge clk or posedge rst) begin
+     $display("IR");
         if (rst) begin
             // Reset all outputs to 0 if reset is high
-            opcode <= 3'b000;
-            operand_address <= 5'b00000;
+            opcode <= 3'bzzz;
+            operand_address <= 5'bzzzz;
         end else if (load_instruct) begin
             // Load data from instruct_in to outputs
             opcode <= instruct_in[7:5];          // Upper 3 bits are the opcode

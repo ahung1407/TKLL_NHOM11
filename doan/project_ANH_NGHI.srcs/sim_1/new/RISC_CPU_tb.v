@@ -24,6 +24,7 @@ module RISC_CPU_tb;
     wire load_ir;
     wire SKZ;
     wire JUMP;
+    wire signal;
 
     // Instantiate the RISC_CPU module
     RISC_CPU uut (
@@ -44,7 +45,9 @@ module RISC_CPU_tb;
         .wr_en(wr_en),
         .load_ir(load_ir),
         .SKZ(SKZ),
-        .JUMP(JUMP)
+        .JUMP(JUMP),
+        .signal(signal)
+        
     );
 
     // Clock generation (10ns clock period)
@@ -60,7 +63,7 @@ module RISC_CPU_tb;
         #15 rst = 0;  // Release reset after 15ns
 
         // Wait for a few clock cycles to observe CPU operation
-        #1000;
+        #200;
 
         // Finish simulation
         $finish;
@@ -77,10 +80,10 @@ module RISC_CPU_tb;
     initial begin
         // Example: Load instructions into instruction memory
         // This requires a pre-generated instruction memory file
-//        $readmemb("instruction_file.mem", uut.IMEM.memory);
+     //    $readmemb("instruction_file.mem", uut.IMEM.memory);
 
 //        // Example: Load data into data memory
-//        $readmemb("data_file.mem", uut.DMEM.memory);
+      //    $readmemb("data_file.mem", uut.DMEM.memory);
 
         $display("Memory initialized.");
     end

@@ -36,6 +36,7 @@ module dataMemory(
     // Assign data bus for read/write operation
     assign data = (wr_en == 0) ? data_out : 8'bz; //set high impedance when not reading
     always @(posedge clk) begin
+          $display("run_DATA");
         if (wr_en) begin
             // Write operation
             mem[addr] <= data;

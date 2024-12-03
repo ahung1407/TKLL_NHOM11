@@ -9,6 +9,7 @@ module addr_mux(
 
     // Sử dụng xung clock để điều khiển sự thay đổi của các tín hiệu đầu ra
     always @(posedge clk) begin
+      $display("run_MUX");
         if (!mux_select) begin
             //instruction_address <= 5'b00000;       // No active output to instruction memory
             operand_address_out = operand_address_in; // Select operand address
