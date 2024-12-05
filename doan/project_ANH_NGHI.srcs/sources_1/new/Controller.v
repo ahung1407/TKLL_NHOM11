@@ -26,8 +26,9 @@ module Controller(
                WRITE_BACK  = 4'b0100,
                MEM_READ    = 4'b0101,
                LOAD_IR_DECODE = 4'b0110,
-               SKIP = 4'b0111,
+               SKIZ = 4'b0111,
                JUMP = 4'b1000;
+               
 
 
 
@@ -78,25 +79,15 @@ module Controller(
                     LDA<=0;
                     state <= LOAD_IR_DECODE;
                     wr_en <= 0;
+                    
                     $display("State: FETCH");
                 end
                 LOAD_IR_DECODE: begin
                     // PREPARE FOR ANOTHER STATE
                     $display("State: LOAD_IR_DECODE");
                     case (opcode)
-                        3'b001: begin // SKZ
-                            pc_enable <= 1;
-                            mux_select <= 1;
-                            imem_enable <= 0;
-                            dmem_enable <= 1;
-                            alu_enable <= 0;
-                            acc_enable <= 0;
-                            state <= FETCH;
-                            load_register <= 0;
-                            SKZ <= 1; // Skip if zero
-                            $display("Opcode: SKZ (Skip if zero)");
-                        end
-                        3'b000: begin
+                       
+                         3'b000: begin
                             $finish;
                         end
                         default: begin  // include ADD, XOR, AND, LDA, JMP, STO
@@ -104,7 +95,7 @@ module Controller(
                         pc_enable <= 0;
                         mux_select <= 0;
                         imem_enable <= 1;
-                        load_ir <= 0;
+                        load_ir <= 1;
                         dmem_enable <= 1;
                         alu_enable <= 0;
                         acc_enable <= 0;
@@ -116,6 +107,21 @@ module Controller(
                  MEM_READ: begin
                     // Prepare for ALU or LDA or JMP or STO
                     case (opcode)
+                        3'b001: begin // SKZ
+                        state <= SKIZ;
+                            pc_enable <= 1;
+                            mux_select <= 1;
+                            imem_enable <= 1;
+                            dmem_enable <= 1;
+                            alu_enable <= 0;
+                            acc_enable <= 0;
+                            load_ir <= 1;
+                            wr_en <= 0;
+                         
+                            load_register <= 0;
+                            SKZ <= 1; // Skip if zero
+                            $display("Opcode: SKZ (Skip if zero)");
+                        end
                         3'b101: begin // LDA
                         pc_enable <= 0;
                         mux_select <= 0;
@@ -224,7 +230,19 @@ module Controller(
                     JMP <= 0;
                     $display("State: JUMP");
                 end
-
+                SKIZ: begin
+                    state <= FETCH;
+                    pc_enable <= 0;
+                    mux_select <= 1;
+                    imem_enable <= 1;
+                    load_ir <= 1;
+                    dmem_enable <= 1;
+                    alu_enable <= 0;
+                    acc_enable <= 0;
+                    wr_en <= 0;
+                    SKZ <= 0;
+                    $display("State: SKZ");
+                end
                 default: begin
                     state <= INIT; // Trạng thái an toàn
                     $display("State: DEFAULT (Unknown State)");

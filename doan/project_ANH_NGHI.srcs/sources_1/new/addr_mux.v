@@ -14,7 +14,7 @@ module addr_mux(
             //instruction_address <= 5'b00000;       // No active output to instruction memory
             operand_address_out = operand_address_in; // Select operand address
         end else begin
-            instruction_address = program_counter;    // Select program counter
+            instruction_address <= program_counter;    // Select program counter
             //operand_address_out <= 5'b00000;       // No active output to operand memory
         end
     end
