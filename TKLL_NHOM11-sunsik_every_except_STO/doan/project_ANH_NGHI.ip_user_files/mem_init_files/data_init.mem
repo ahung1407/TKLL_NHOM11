@@ -1,0 +1,10 @@
+00000000  // Data at address 0
+00000010  // Data at address 1
+00000011  // Data at address 2
+00000100  // Data at address 3
+00000101  // Data at address 4
+00001010  // Data at address 5
+00001100  // Data at address 6
+00001111  // Data at address 7
+11110101  // Data at address 8
+

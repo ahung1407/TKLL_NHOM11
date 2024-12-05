@@ -1,0 +1,319 @@
+Time resolution is 1 ps
+Memory initialized.
+State: INIT (Reset)
+run_PC
+IR
+ACCRES_PC
+Time: 0 | PC_out: 0 | Opcode: zzz | Operand: zzzzz | Accumulator: 0 | ALU_Result: x | Instr: xx | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: INIT (Reset)
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+State: INIT
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 15000 | PC_out: 0 | Opcode: zzz | Operand: zzzzz | Accumulator: 0 | ALU_Result: x | Instr: xx | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 25000 | PC_out: 0 | Opcode: xxx | Operand: xxxxx | Accumulator: 0 | ALU_Result: x | Instr: xx | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 35000 | PC_out: 0 | Opcode: xxx | Operand: xxxxx | Accumulator: 0 | ALU_Result: x | Instr: 45 | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 45000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 0 | ALU_Result: x | Instr: 45 | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 55000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 0 | ALU_Result: x | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 65000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 10 | ALU_Result: 10 | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00000
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 75000 | PC_out: 1 | Opcode: 010 | Operand: 00101 | Accumulator: 10 | ALU_Result: 10 | Instr: a6 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 85000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 10 | ALU_Result: 10 | Instr: a6 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 95000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 10 | ALU_Result: 10 | Instr: a6 | Data_Mem: 0c | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 105000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 12 | ALU_Result: 10 | Instr: a6 | Data_Mem: 0c | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00001
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 115000 | PC_out: 2 | Opcode: 101 | Operand: 00110 | Accumulator: 12 | ALU_Result: 10 | Instr: 47 | Data_Mem: 0c | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 125000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 12 | ALU_Result: 10 | Instr: 47 | Data_Mem: 0c | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 135000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 12 | ALU_Result: 10 | Instr: 47 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 145000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 12 | ALU_Result: 27 | Instr: 47 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 155000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 27 | ALU_Result: 27 | Instr: 47 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00010
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 165000 | PC_out: 3 | Opcode: 010 | Operand: 00111 | Accumulator: 27 | ALU_Result: 27 | Instr: c6 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 175000 | PC_out: 3 | Opcode: 110 | Operand: 00110 | Accumulator: 27 | ALU_Result: 27 | Instr: c6 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 185000 | PC_out: 3 | Opcode: 110 | Operand: 00110 | Accumulator: 27 | ALU_Result: 27 | Instr: c6 | Data_Mem: 1b | Wr_En: 1 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: WRITE_BACK
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 195000 | PC_out: 3 | Opcode: 110 | Operand: 00110 | Accumulator: 27 | ALU_Result: 27 | Instr: c6 | Data_Mem: 1b | Wr_En: 1 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00011
+run_MUX
+IR
+run_DATA
+IM_PC
+Time: 205000 | PC_out: 4 | Opcode: 110 | Operand: 00110 | Accumulator: 27 | ALU_Result: 27 | Instr: e0 | Data_Mem: 0c | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 215000 | PC_out: 4 | Opcode: 111 | Operand: 00000 | Accumulator: 27 | ALU_Result: 27 | Instr: e0 | Data_Mem: 1b | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 225000 | PC_out: 4 | Opcode: 111 | Operand: 00000 | Accumulator: 27 | ALU_Result: 27 | Instr: e0 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 00100
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 235000 | PC_out: 0 | Opcode: 111 | Operand: 00000 | Accumulator: 27 | ALU_Result: 27 | Instr: e0 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 245000 | PC_out: 0 | Opcode: 111 | Operand: 00000 | Accumulator: 27 | ALU_Result: 27 | Instr: e0 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 255000 | PC_out: 0 | Opcode: 111 | Operand: 00000 | Accumulator: 27 | ALU_Result: 27 | Instr: 45 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 265000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 27 | ALU_Result: 27 | Instr: 45 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 00000
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 275000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 27 | ALU_Result: 27 | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 285000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 27 | ALU_Result: 27 | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 315000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 27 | ALU_Result: 37 | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 325000 | PC_out: 0 | Opcode: 010 | Operand: 00101 | Accumulator: 37 | ALU_Result: 37 | Instr: 45 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00000
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 335000 | PC_out: 1 | Opcode: 010 | Operand: 00101 | Accumulator: 37 | ALU_Result: 37 | Instr: a6 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 345000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 37 | ALU_Result: 37 | Instr: a6 | Data_Mem: 0a | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 355000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 37 | ALU_Result: 37 | Instr: a6 | Data_Mem: 1b | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 365000 | PC_out: 1 | Opcode: 101 | Operand: 00110 | Accumulator: 27 | ALU_Result: 37 | Instr: a6 | Data_Mem: 1b | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00001
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 375000 | PC_out: 2 | Opcode: 101 | Operand: 00110 | Accumulator: 27 | ALU_Result: 37 | Instr: 47 | Data_Mem: 1b | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 385000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 27 | ALU_Result: 37 | Instr: 47 | Data_Mem: 1b | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 395000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 27 | ALU_Result: 37 | Instr: 47 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 405000 | PC_out: 2 | Opcode: 010 | Operand: 00111 | Accumulator: 27 | ALU_Result: 42 | Instr: 47 | Data_Mem: 0f | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+$finish called at time : 415 ns : File "C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sim_1/new/RISC_CPU_tb.v" Line 72
