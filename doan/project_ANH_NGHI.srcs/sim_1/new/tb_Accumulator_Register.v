@@ -1,90 +1,96 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/23/2024 08:05:24 PM
-// Design Name: 
-// Module Name: tb_Accumulator_Register
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: Testbench for Accumulator_Register module
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-module tb_Accumulator_Register;
+module Accumulator_Register_tb;
 
-    // Testbench signals
+    // Inputs
     reg clk;
     reg reset;
+    reg LDA;
     reg load_register;
     reg [7:0] data_in;
+    reg [7:0] data_in2;
+
+    // Output
     wire [7:0] data_out;
 
-    // Instantiate the Accumulator_Register module
+    // Instantiate the Unit Under Test (UUT)
     Accumulator_Register uut (
         .clk(clk),
         .reset(reset),
+        .LDA(LDA),
         .load_register(load_register),
         .data_in(data_in),
+        .data_in2(data_in2),
         .data_out(data_out)
     );
 
-    // Generate clock signal with a 10 time unit period
-    always begin
-        #5 clk = ~clk;  // Toggle clock every 5 units, 10 unit clock period
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // 10ns clock period
     end
 
-    // Stimulus
+    // Test sequence
     initial begin
-        // Initialize signals
-        clk = 0;
-        reset = 0;
+        // Initialize inputs
+        reset = 1;
+        LDA = 0;
         load_register = 0;
-        data_in = 8'b0000_0000;
+        data_in = 8'h00;
+        data_in2 = 8'h00;
 
-        // Test 1: Reset the register
-        $display("Test 1: Resetting Accumulator Register");
-        reset = 1; #10;  // Assert reset
-        reset = 0; #10;  // Deassert reset
+        // Apply reset
+        #10;
+        reset = 0;
+        $display("Reset released. data_out=%h", data_out);
 
-        // Test 2: Load data into the register
-        $display("Test 2: Loading data into Accumulator Register");
-        data_in = 8'b1010_1010;  // Set data to 0xAA
-        load_register = 1; #10;  // Load data into the register
-        load_register = 0; #10;  // Deassert load_register
+        // Test load_register
+        #10;
+        load_register = 1;
+        data_in = 8'h55; // Example value
+        #10;
+        load_register = 0;
+        $display("Loaded data_in. data_out=%h", data_out);
 
-        // Test 3: Hold value without load
-        $display("Test 3: Holding value without loading new data");
-        data_in = 8'b0101_0101;  // Change data_in, but do not load
-        #20;  // Wait to ensure data_out does not change
+        // Test LDA
+        #10;
+        LDA = 1;
+        data_in2 = 8'hAA; // Example value
+        #10;
+        LDA = 0;
+        $display("Loaded data_in2 via LDA. data_out=%h", data_out);
 
-        // Test 4: Load new data
-        $display("Test 4: Loading new data into Accumulator Register");
-        data_in = 8'b1111_0000;  // Set data to 0xF0
-        load_register = 1; #10;  // Load new data into the register
-        load_register = 0; #10;  // Deassert load_register
+        // Keep current value
+        #10;
+        $display("Hold data_out. data_out=%h", data_out);
 
-        // Test 5: Reset the register again
-        $display("Test 5: Resetting Accumulator Register again");
-        reset = 1; #10;  // Assert reset
-        reset = 0; #10;  // Deassert reset
+        // Reset again
+        #10;
+        reset = 1;
+        #10;
+        reset = 0;
+        $display("Reset performed. data_out=%h", data_out);
 
-        // Finish the simulation
+        // Test multiple signals
+        #10;
+        load_register = 1;
+        data_in = 8'hFF;
+        LDA = 1;
+        data_in2 = 8'hBB;
+        #10;
+        load_register = 0;
+        LDA = 0;
+        $display("Loaded both signals. data_out=%h", data_out);
+
+        // Finish simulation
+        #20;
         $finish;
     end
 
-    // Monitor the outputs
+    // Monitor the data_out signal
     initial begin
-        $monitor("At time %t, reset = %b, load_register = %b, data_in = %b, data_out = %b", 
-                 $time, reset, load_register, data_in, data_out);
+        $monitor("Time=%0t | clk=%b | reset=%b | load_register=%b | LDA=%b | data_in=%h | data_in2=%h | data_out=%h",
+                 $time, clk, reset, load_register, LDA, data_in, data_in2, data_out);
     end
 
 endmodule

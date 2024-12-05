@@ -17,6 +17,7 @@ module RISC_CPU_tb;
     wire is_zero;
     wire [7:0] accumulator_out;
 
+    // Control signals
     wire pc_enable;
     wire mux_select;
     wire load_register;
@@ -24,7 +25,7 @@ module RISC_CPU_tb;
     wire load_ir;
     wire SKZ;
     wire JUMP;
-    wire signal;
+    wire LDA;
 
     // Instantiate the RISC_CPU module
     RISC_CPU uut (
@@ -46,14 +47,13 @@ module RISC_CPU_tb;
         .load_ir(load_ir),
         .SKZ(SKZ),
         .JUMP(JUMP),
-        .signal(signal)
-        
+        .LDA(LDA)
     );
 
     // Clock generation (10ns clock period)
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;
+        forever #5 clk = ~clk; // Clock with 10ns period
     end
 
     // Test sequence
@@ -63,9 +63,12 @@ module RISC_CPU_tb;
         #15 rst = 0;  // Release reset after 15ns
 
         // Wait for a few clock cycles to observe CPU operation
-        #200;
+        #300; // Wait for 200ns to observe the behavior
 
-        // Finish simulation
+        // Optionally you can modify the testbench to inject a few instructions here
+        // Load instruction into memory using a predefined memory file or write some instructions manually.
+
+        // Finish simulation after some time
         $finish;
     end
 
@@ -76,14 +79,16 @@ module RISC_CPU_tb;
                  memory_data, wr_en, mux_select, pc_enable, SKZ, JUMP);
     end
 
-    // Initialize memory with test data
+    // Initialize memory with test data (Optional)
     initial begin
         // Example: Load instructions into instruction memory
         // This requires a pre-generated instruction memory file
-     //    $readmemb("instruction_file.mem", uut.IMEM.memory);
+        // Uncomment the following line if you have an instruction file
+        //$readmemb("instruction_file.mem", uut.IMEM.memory);
 
-//        // Example: Load data into data memory
-      //    $readmemb("data_file.mem", uut.DMEM.memory);
+        // Example: Load data into data memory (Optional)
+        // Uncomment the following line if you have a data memory file
+        //$readmemb("data_file.mem", uut.DMEM.memory);
 
         $display("Memory initialized.");
     end

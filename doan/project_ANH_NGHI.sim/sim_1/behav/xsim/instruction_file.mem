@@ -1,4 +1,6 @@
 01000101  // ADD (Opcode 010) with operand at address 5
 01100110  // AND (Opcode 011) with operand at address 6
 10000111  // XOR (Opcode 100) with operand at address 7
-
+10100101 // LDA (opcode 101) with operand at address 5
+11000100 // STO (opcode 110) with operand at address 4
+01000100  // ADD (Opcode 010) with operand at address 4

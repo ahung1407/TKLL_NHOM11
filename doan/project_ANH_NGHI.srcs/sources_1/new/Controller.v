@@ -8,9 +8,9 @@ module Controller(
     output reg load_ir,             // Điều khiển nạp Instruction Register
     output reg SKZ,
     output reg wr_en,
+    output reg LDA,
     output reg load_register,
-    output reg signal,
-    output reg JUMP,
+    output reg JMP,
     output reg imem_enable,         // Enable tín hiệu cho Instruction Memory
     output reg dmem_enable,         // Enable tín hiệu cho Data Memory
     output reg alu_enable,          // Enable tín hiệu cho ALU
@@ -21,11 +21,15 @@ module Controller(
     reg [3:0] state;
     localparam INIT        = 4'b0000,
                FETCH       = 4'b0001,
-               DECODE      = 4'b0010,
-               EXECUTE     = 4'b0011,
+               ALU         = 4'b0010,
+               LOAD_ACC     = 4'b0011,
                WRITE_BACK  = 4'b0100,
                MEM_READ    = 4'b0101,
-               LOAD_IR     = 4'b0110;
+               LOAD_IR_DECODE = 4'b0110,
+               SKIP = 4'b0111,
+               JUMP = 4'b1000;
+
+
 
     // Chuyển trạng thái và logic điều khiển
     always @(posedge clk or posedge rst) begin
@@ -38,17 +42,18 @@ module Controller(
             load_ir <= 0;
             load_register <= 0;
             SKZ <= 0;
-            JUMP <= 0;
+            JMP <= 0;
             imem_enable <= 1;
             dmem_enable <= 1;
             alu_enable <= 0;
             acc_enable <= 0;
+            LDA <=0;
             $display("State: INIT (Reset)");
         end else begin
             // FSM logic
             case (state)
                 INIT: begin
-                    // Reset và chuẩn bị chuyển sang FETCH
+                    // prepare for FETCH
                     pc_enable <= 0;
                     mux_select <= 1;
                     imem_enable <= 1;
@@ -61,7 +66,7 @@ module Controller(
                 end
 
                 FETCH: begin
-                    // Kích hoạt các module liên quan đến giai đoạn FETCH
+                    // prepare for LOAD_IR
                     pc_enable <= 0;
                     mux_select <= 0;
                     imem_enable <= 1;
@@ -69,58 +74,129 @@ module Controller(
                     dmem_enable <= 1;
                     alu_enable <= 0;
                     acc_enable <= 0;
-                    state <= LOAD_IR;
+                    load_register <=0;
+                    LDA<=0;
+                    state <= LOAD_IR_DECODE;
+                    wr_en <= 0;
                     $display("State: FETCH");
                 end
-                LOAD_IR: begin
-                    // Kích hoạt các module liên quan đến giai đoạn FETCH
-                    pc_enable <= 0;
-                    mux_select <= 0;
-                    imem_enable <= 1;
-                    load_ir <= 0;
-                    dmem_enable <= 1;
-                    alu_enable <= 0;
-                    acc_enable <= 0;
-                    state <= DECODE;
-                    $display("State: LOAD_IR");
-                end
-                 DECODE: begin
-                    // Kích hoạt các module liên quan đến giai đoạn FETCH
-                    pc_enable <= 0;
-                    mux_select <= 0;
-                    imem_enable <= 1;
-                    load_ir <= 0;
-                    dmem_enable <= 1;
-                    alu_enable <= 1;
-                    acc_enable <= 0;
-                    $display("MEM_READ");
+                LOAD_IR_DECODE: begin
+                    // PREPARE FOR ANOTHER STATE
+                    $display("State: LOAD_IR_DECODE");
                     case (opcode)
-                        3'b001: begin
+                        3'b001: begin // SKZ
+                            pc_enable <= 1;
+                            mux_select <= 1;
+                            imem_enable <= 0;
+                            dmem_enable <= 1;
+                            alu_enable <= 0;
+                            acc_enable <= 0;
+                            state <= FETCH;
+                            load_register <= 0;
                             SKZ <= 1; // Skip if zero
                             $display("Opcode: SKZ (Skip if zero)");
                         end
-                        3'b111: begin
-                            state <= WRITE_BACK; // Branching operation
-                            $display("Opcode: Branching");
+                        3'b000: begin
+                            $finish;
                         end
-                        default: begin
-                        load_register<=0;
-                        state <= EXECUTE; // Other operations
+                        default: begin  // include ADD, XOR, AND, LDA, JMP, STO
+                        // prepare for MEM_READ
+                        pc_enable <= 0;
+                        mux_select <= 0;
+                        imem_enable <= 1;
+                        load_ir <= 0;
+                        dmem_enable <= 1;
+                        alu_enable <= 0;
+                        acc_enable <= 0;
+                        state <= MEM_READ; // Other operations
                         end
                     endcase
-                end
                 
-                EXECUTE: begin
-                    // Kích hoạt ALU và Accumulator cho giai đoạn EXECUTE
+                end
+                 MEM_READ: begin
+                    // Prepare for ALU or LDA or JMP or STO
+                    case (opcode)
+                        3'b101: begin // LDA
+                        pc_enable <= 0;
+                        mux_select <= 0;
+                        imem_enable <= 1;
+                        load_ir <= 1;
+                        LDA <= 0;
+                        dmem_enable <= 1;
+                        alu_enable <= 0;
+                        acc_enable <= 0;
+                        state <= LOAD_ACC;
+                        end
+                        3'b110: begin // STO
+                            state <= WRITE_BACK;
+                            pc_enable <= 0;
+                            mux_select <= 0;
+                            imem_enable <= 1;
+                            load_ir <= 1;
+                            dmem_enable <= 1;
+                            alu_enable <= 0;
+                            acc_enable <= 1;
+                            wr_en <= 1;
+                        end
+                        3'b111: begin // JMP
+                            state <= JUMP;
+                            pc_enable <= 1;
+                            mux_select <= 0;
+                            imem_enable <= 1;
+                            load_ir <= 1;
+                            dmem_enable <= 1;
+                            alu_enable <= 0;
+                            acc_enable <= 0;
+                            wr_en <= 0;
+                            JMP <= 1;
+                        end
+                        default: begin // relate to calculate ALU
+                            state <= ALU;
+                            pc_enable <= 0;
+                            mux_select <= 0;
+                            imem_enable <= 1;
+                            load_ir <= 1;
+                            dmem_enable <= 0;
+                            alu_enable <= 0;
+                            acc_enable <= 0;
+                        end
+                    endcase
+                    $display("MEM_READ");
+                end
+                ALU: begin
+                    state <= LOAD_ACC;
                     pc_enable <= 0;
                     mux_select <= 0;
+                    imem_enable <= 1;
+                    load_ir <= 1;
+                    dmem_enable <= 1;
+                    alu_enable <= 1;
+                    acc_enable <= 0;
+                    load_register <=0;
+                    $display("ALU");
+                end
+                LOAD_ACC: begin
+                    
+
+                    // AND ADD XOR LDA
+                    pc_enable <= 1;
+                    mux_select <= 1;
                     imem_enable <= 0;
                     dmem_enable <= 1;
                     alu_enable <= 0;
                     acc_enable <= 1;
-                    state <= WRITE_BACK;
-                    load_register <= 1;
-                    $display("State: EXECUTE");
+                    state <= FETCH;
+                   case(opcode) 
+                    3'b101: begin
+                    LDA<=1;
+                    end
+                    default: begin
+                      load_register <= 1;  
+                    end
+
+                    endcase
+                    
+                    $display("State: LOAD_ACC");
                 end
 
                 WRITE_BACK: begin
@@ -132,15 +208,21 @@ module Controller(
                     alu_enable <= 0;
                     acc_enable <= 0;
                     load_register <= 0;
-                    case (opcode)
-                        3'b110: begin
-                            wr_en<=1;
-                            $display("Opcode: STO");
-                        end
-                        default: wr_en<=0; // Other operations
-                    endcase
                     state <= FETCH; // Quay lại FETCH
                     $display("State: WRITE_BACK");
+                end
+                JUMP: begin
+                    state <= FETCH;
+                    pc_enable <= 0;
+                    mux_select <= 1;
+                    imem_enable <= 1;
+                    load_ir <= 1;
+                    dmem_enable <= 1;
+                    alu_enable <= 0;
+                    acc_enable <= 0;
+                    wr_en <= 0;
+                    JMP <= 0;
+                    $display("State: JUMP");
                 end
 
                 default: begin

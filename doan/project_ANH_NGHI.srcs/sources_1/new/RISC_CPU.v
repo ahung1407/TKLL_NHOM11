@@ -21,7 +21,7 @@ module RISC_CPU (
     output wire load_ir,
     output wire SKZ,
     output wire JUMP,
-    output wire signal
+    output wire LDA
 );
 
     // Internal wires and registers
@@ -32,23 +32,26 @@ module RISC_CPU (
     wire dmem_enable;
     wire alu_enable;
     wire acc_enable;
+    
+    // Controller Module
     Controller CTRL (
         .clk(clk),
         .rst(rst),
-        .opcode(opcode),               // Kết nối opcode
+        .opcode(opcode),               // Connect opcode from Instruction Register
         .pc_enable(pc_enable),
         .mux_select(mux_select),
         .wr_en(wr_en),
         .load_ir(load_ir),
         .load_register(load_register),
         .SKZ(SKZ),
-        .JUMP(JUMP),
-        .signal(signal),
+        .JMP(JUMP),
+        .LDA(LDA),
         .imem_enable(imem_enable),    // Instruction Memory enable
         .dmem_enable(dmem_enable),    // Data Memory enable
         .alu_enable(alu_enable),      // ALU enable
         .acc_enable(acc_enable)       // Accumulator enable
     );
+    
     // Program Counter
     Program_Counter PC (
         .clk(clk),
@@ -92,7 +95,7 @@ module RISC_CPU (
     dataMemory DMEM (
         .clk(clk & dmem_enable),  // Enable Data Memory
         .addr(operand_address_out),
-        .data(memory_data),
+        .data(memory_data), // accumulator out
         .wr_en(wr_en)
     );
     
@@ -111,11 +114,10 @@ module RISC_CPU (
         .clk(clk & acc_enable),   // Enable Accumulator Register
         .reset(rst),
         .load_register(load_register),
+        .LDA(LDA),
         .data_in(alu_result),
+        .data_in2(memory_data),
         .data_out(accumulator_out)
     );
-    
-    // Controller
-    
 
 endmodule
