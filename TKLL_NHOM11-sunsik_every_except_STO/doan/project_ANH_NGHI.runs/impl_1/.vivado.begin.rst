@@ -3,3 +3,88 @@
     <Process Command="vivado.bat" Owner="Minh_Hung" Host="DESKTOP-KJ2GVQA" Pid="37912" HostCore="16" HostMemory="025028317184">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="15244" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="5920" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="8360" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="15588" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="18500" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="17152" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="7912" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="17340" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="19684" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="7856" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="8756" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="17308" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="11224" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="18592" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="15536" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="20588" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="GIGABYTE" Host="DUYKHIEM" Pid="16004" HostCore="12" HostMemory="016948453376">
+    </Process>
+</ProcessHandle>

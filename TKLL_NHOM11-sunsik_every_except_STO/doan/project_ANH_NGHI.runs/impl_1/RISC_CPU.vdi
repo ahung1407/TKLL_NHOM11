@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  9 18:37:21 2024
+# Process ID: 10488
+# Current directory: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/impl_1
+# Command line: vivado.exe -log RISC_CPU.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source RISC_CPU.tcl -notrace
+# Log file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/impl_1/RISC_CPU.vdi
+# Journal file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/impl_1\vivado.jou
+# Running On        :DuyKhiem
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
+# CPU Frequency     :2688 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :16948 MB
+# Swap memory       :5100 MB
+# Total Virtual     :22048 MB
+# Available Virtual :5562 MB
+#-----------------------------------------------------------
+source RISC_CPU.tcl -notrace
+Command: open_checkpoint RISC_CPU_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 329.285 ; gain = 5.309
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 947.906 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1040.691 ; gain = 0.137
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1647.215 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 1647.215 ; gain = 14.543
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1647.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2024.1 (64-bit) build 5076996
+WARNING: [Vivado 12-23575] Critical violations of the methodology design rules detected. Critical violations may contribute to timing failures or cause functional issues in hardware. Run report_methodology for more information.
+open_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1647.215 ; gain = 1331.629
+Command: write_bitstream -force RISC_CPU.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net CTRL/CLK is a gated clock net sourced by a combinational pin CTRL/data_out[7]_i_3/O, cell CTRL/data_out[7]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net CTRL/clk0 is a gated clock net sourced by a combinational pin CTRL/data_out[7]_i_2__0/O, cell CTRL/data_out[7]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net CTRL/clk00_out is a gated clock net sourced by a combinational pin CTRL/ALU_result_tristate_oe[7]_i_2/O, cell CTRL/ALU_result_tristate_oe[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PDRC-153] Gated clock check: Net CTRL/imem_enable_reg_0 is a gated clock net sourced by a combinational pin CTRL/instruct[6]_i_2/O, cell CTRL/instruct[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT CTRL/ALU_result_tristate_oe[7]_i_2 is driving clock pin of 9 cells. This could lead to large hold time violations. Involved cells are:
+ALU/ALU_result_tristate_oe_reg[0], ALU/ALU_result_tristate_oe_reg[1], ALU/ALU_result_tristate_oe_reg[2], ALU/ALU_result_tristate_oe_reg[3], ALU/ALU_result_tristate_oe_reg[4], ALU/ALU_result_tristate_oe_reg[5], ALU/ALU_result_tristate_oe_reg[6], ALU/ALU_result_tristate_oe_reg[7], and data_out_reg[7]_i_5
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT CTRL/data_out[7]_i_2__0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+DMEM/data_out_reg[0], DMEM/data_out_reg[1], DMEM/data_out_reg[2], DMEM/data_out_reg[3], DMEM/data_out_reg[4], DMEM/data_out_reg[5], DMEM/data_out_reg[6], DMEM/data_out_reg[7], DMEM/mem_reg_0_31_0_0/SP, DMEM/mem_reg_0_31_1_1/SP, DMEM/mem_reg_0_31_2_2/SP, DMEM/mem_reg_0_31_3_3/SP, DMEM/mem_reg_0_31_4_4/SP, DMEM/mem_reg_0_31_5_5/SP, DMEM/mem_reg_0_31_6_6/SP... and (the first 15 of 16 listed)
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT CTRL/data_out[7]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+ACC/data_out_reg[0], ACC/data_out_reg[1], ACC/data_out_reg[2], ACC/data_out_reg[3], ACC/data_out_reg[4], ACC/data_out_reg[5], ACC/data_out_reg[6], and ACC/data_out_reg[7]
+WARNING: [DRC PLHOLDVIO-2] Non-Optimal connections which could lead to hold violations: A LUT CTRL/instruct[6]_i_2 is driving clock pin of 6 cells. This could lead to large hold time violations. Involved cells are:
+IMEM/instruct_reg[0], IMEM/instruct_reg[1], IMEM/instruct_reg[2], IMEM/instruct_reg[4], IMEM/instruct_reg[5], and IMEM/instruct_reg[6]
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./RISC_CPU.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2150.391 ; gain = 503.176
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 18:37:51 2024...

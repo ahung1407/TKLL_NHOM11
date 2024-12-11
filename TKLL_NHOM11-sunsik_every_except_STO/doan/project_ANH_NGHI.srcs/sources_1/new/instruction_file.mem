@@ -1,5 +1,5 @@
 01000101  // ADD (Opcode 010) with operand at address 5
 10100110  // LDA (Opcode 101) with operand at address 6
 01000111  // ADD (Opcode 010) with operand at address 7
-11000110 // LDA (opcode 101) with operand at address 6
+11000110 // STO (opcode 110) with operand at address 6
 11100000 // JMP (opcode 111) return PC = 0;

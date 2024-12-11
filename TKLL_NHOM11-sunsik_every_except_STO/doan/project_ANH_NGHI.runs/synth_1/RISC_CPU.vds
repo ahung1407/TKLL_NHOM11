@@ -1,0 +1,338 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  9 18:29:40 2024
+# Process ID: 16428
+# Current directory: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/synth_1
+# Command line: vivado.exe -log RISC_CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RISC_CPU.tcl
+# Log file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/synth_1/RISC_CPU.vds
+# Journal file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/synth_1\vivado.jou
+# Running On        :DuyKhiem
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
+# CPU Frequency     :2688 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :16948 MB
+# Swap memory       :5100 MB
+# Total Virtual     :22048 MB
+# Available Virtual :5621 MB
+#-----------------------------------------------------------
+source RISC_CPU.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.289 ; gain = 201.703
+Command: read_checkpoint -auto_incremental -incremental C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/utils_1/imports/synth_1/RISC_CPU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/utils_1/imports/synth_1/RISC_CPU.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top RISC_CPU -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19744
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1397.508 ; gain = 449.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'RISC_CPU' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:1]
+WARNING: [Synth 8-11581] system task call 'finish' not supported [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v:1]
+WARNING: [Synth 8-7071] port 'is_zero' of module 'Controller' is unconnected for instance 'CTRL' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:46]
+WARNING: [Synth 8-7023] instance 'CTRL' of module 'Controller' has 16 connections declared, but only 15 given [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:46]
+INFO: [Synth 8-6157] synthesizing module 'Program_Counter' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v:1]
+INFO: [Synth 8-251] run_PC [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Program_Counter' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addr_mux' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:1]
+INFO: [Synth 8-251] run_MUX [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'addr_mux' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'instructionMemory' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:23]
+INFO: [Synth 8-3876] $readmem data file 'instruction_file.mem' is read successfully [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:34]
+INFO: [Synth 8-251] IM_PC [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'instructionMemory' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Instruction_Register' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v:22]
+INFO: [Synth 8-251] IR [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'Instruction_Register' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v:22]
+INFO: [Synth 8-6157] synthesizing module 'dataMemory' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:23]
+INFO: [Synth 8-3876] $readmem data file 'data_init.mem' is read successfully [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:34]
+INFO: [Synth 8-251] run_DATA [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'dataMemory' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-251] run_ALU [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Accumulator_Register' [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v:22]
+INFO: [Synth 8-251] ACCRES_PC [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'Accumulator_Register' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'RISC_CPU' (0#1) [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:1]
+WARNING: [Synth 8-7129] Port is_zero in module Controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1509.625 ; gain = 561.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1509.625 ; gain = 561.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1509.625 ; gain = 561.406
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1509.625 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [F:/DA_TKLL/Arty-Z7-20-Extension-board-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [F:/DA_TKLL/Arty-Z7-20-Extension-board-Master.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [F:/DA_TKLL/Arty-Z7-20-Extension-board-Master.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [F:/DA_TKLL/Arty-Z7-20-Extension-board-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/DA_TKLL/Arty-Z7-20-Extension-board-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/RISC_CPU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/RISC_CPU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1612.641 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1612.641 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Controller'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                             0000 |                             0000
+                   FETCH |                             0001 |                             0001
+          LOAD_IR_DECODE |                             0010 |                             0110
+                MEM_READ |                             0011 |                             0101
+                    SKIZ |                             0100 |                             0111
+              WRITE_BACK |                             0101 |                             0100
+                    JUMP |                             0110 |                             1000
+                     ALU |                             0111 |                             0010
+                LOAD_ACC |                             1000 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	              256 Bit	(32 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   9 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 8     
+	   9 Input    1 Bit        Muxes := 19    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'AMUX/instruction_address_reg' and it is trimmed from '5' to '3' bits. [C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v:17]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+--------------+-----------+----------------------+---------------+
+|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives    | 
++------------+--------------+-----------+----------------------+---------------+
+|RISC_CPU    | DMEM/mem_reg | Implied   | 32 x 8               | RAM32X1S x 8  | 
++------------+--------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+--------------+-----------+----------------------+---------------+
+|Module Name | RTL Object   | Inference | Size (Depth x Width) | Primitives    | 
++------------+--------------+-----------+----------------------+---------------+
+|RISC_CPU    | DMEM/mem_reg | Implied   | 32 x 8               | RAM32X1S x 8  | 
++------------+--------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     2|
+|3     |LUT1     |     1|
+|4     |LUT2     |    41|
+|5     |LUT3     |    15|
+|6     |LUT4     |    14|
+|7     |LUT5     |    14|
+|8     |LUT6     |    21|
+|9     |RAM32X1S |     8|
+|10    |FDCE     |    25|
+|11    |FDPE     |     3|
+|12    |FDRE     |    37|
+|13    |IBUF     |     2|
+|14    |OBUF     |     9|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1612.641 ; gain = 561.406
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.641 ; gain = 664.422
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1612.641 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1612.641 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  RAM32X1S => RAM32X1S (RAMS32): 8 instances
+
+Synth Design complete | Checksum: 8ab77a6c
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 7 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1612.641 ; gain = 1092.617
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1612.641 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.runs/synth_1/RISC_CPU.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file RISC_CPU_utilization_synth.rpt -pb RISC_CPU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  9 18:30:23 2024...

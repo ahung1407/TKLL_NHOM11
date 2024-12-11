@@ -3,46 +3,52 @@ module RISC_CPU (
     input wire rst,               // Reset signal
 
     // Outputs for observation
-    output wire [4:0] program_counter_out,  // Program Counter output
-    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
-    output wire [7:0] instruction,          // Instruction from Instruction Memory
-    output wire [2:0] opcode,               // Opcode from Instruction Register
-    output wire [4:0] operand_address,      // Operand address from Instruction Register
-    output wire [7:0] memory_data,          // Data read from Data Memory
-    output wire [7:0] alu_result,           // Result from ALU
-    output wire is_zero,                    // Zero flag from ALU
-    output wire [7:0] accumulator_out,      // Output from Accumulator Register
+//    output wire [2:0] opcode,              // Opcode from Instruction Register
+    output wire [7:0] accumulator_out,    // Output from Accumulator Register
+    output wire alu_enable
 
-    // Control signals for observation
-    output wire pc_enable,
-    output wire mux_select,
-    output wire load_register,
-    output wire wr_en,
-    output wire load_ir,
-    output wire SKZ,
-    output wire JUMP,
-    output wire LDA
 );
-
+    wire [4:0] program_counter_out;  // Program Counter output
+    wire [4:0] operand_address_out;  // Operand Address output from addr_mux
+    wire [7:0] instruction;          // Instruction from Instruction Memory
+    wire load_ir;
+    wire load_register;
+    wire LDA;
+    wire [4:0] operand_address;      // Operand address from Instruction Register
+    wire [7:0] memory_data;          // Data read from Data Memory
+    wire [7:0] alu_result;           // Result from ALU
+    wire is_zero;                    // Zero flag from ALU
+    
+    wire [2:0] opcode;
+    // Control signals for observation
+    wire pc_enable;
+    wire mux_select;
+    
+    wire wr_en;
+    
+    wire SKZ;
+    wire JUMP;
+    
     // Internal wires and registers
     wire [4:0] instruction_address;    // Address for Instruction Memory
-     wire [7:0] dmem_data; // Inout wire for DMEM
+    wire [7:0] dmem_data; // Inout wire for DMEM
     // Wires for enable signals from the Controller
     wire imem_enable;
     wire dmem_enable;
-    wire alu_enable;
+    
     wire acc_enable;
     
    // Memory data handling (inout)
     assign dmem_data = (wr_en) ? accumulator_out : 8'bz; // Write to DMEM
     assign memory_data = dmem_data;                      // Read from DMEM
+    // display result on board
     // Controller Module
     Controller CTRL (
         .clk(clk),
         .rst(rst),
         .opcode(opcode),               // Connect opcode from Instruction Register
         .pc_enable(pc_enable),
-        .mux_select(mux_select),
+        .mux_select(mux_select),    
         .wr_en(wr_en),
         .load_ir(load_ir),
         .load_register(load_register),

@@ -1,0 +1,116 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Dec  9 18:31:30 2024
+| Host         : DuyKhiem running 64-bit major release  (build 9200)
+| Command      : report_drc -file RISC_CPU_drc_routed.rpt -pb RISC_CPU_drc_routed.pb -rpx RISC_CPU_drc_routed.rpx
+| Design       : RISC_CPU
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 10
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 4          |
+| PLCK-12     | Warning  | Clock Placer Checks                                         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 4          |
+| ZPS7-1      | Warning  | PS7 block required                                          | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net CTRL/CLK is a gated clock net sourced by a combinational pin CTRL/data_out[7]_i_3/O, cell CTRL/data_out[7]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net CTRL/clk0 is a gated clock net sourced by a combinational pin CTRL/data_out[7]_i_2__0/O, cell CTRL/data_out[7]_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net CTRL/clk00_out is a gated clock net sourced by a combinational pin CTRL/ALU_result_tristate_oe[7]_i_2/O, cell CTRL/ALU_result_tristate_oe[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net CTRL/imem_enable_reg_0 is a gated clock net sourced by a combinational pin CTRL/instruct[6]_i_2/O, cell CTRL/instruct[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	clk_IBUF_inst (IBUF.O) is locked to D19
+	clk_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
+
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT CTRL/ALU_result_tristate_oe[7]_i_2 is driving clock pin of 9 cells. This could lead to large hold time violations. Involved cells are:
+ALU/ALU_result_tristate_oe_reg[0], ALU/ALU_result_tristate_oe_reg[1],
+ALU/ALU_result_tristate_oe_reg[2], ALU/ALU_result_tristate_oe_reg[3],
+ALU/ALU_result_tristate_oe_reg[4], ALU/ALU_result_tristate_oe_reg[5],
+ALU/ALU_result_tristate_oe_reg[6], ALU/ALU_result_tristate_oe_reg[7]
+data_out_reg[7]_i_5
+Related violations: <none>
+
+PLHOLDVIO-2#2 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT CTRL/data_out[7]_i_2__0 is driving clock pin of 16 cells. This could lead to large hold time violations. Involved cells are:
+DMEM/data_out_reg[0], DMEM/data_out_reg[1], DMEM/data_out_reg[2],
+DMEM/data_out_reg[3], DMEM/data_out_reg[4], DMEM/data_out_reg[5],
+DMEM/data_out_reg[6], DMEM/data_out_reg[7],
+DMEM/mem_reg_0_31_0_0/SP (in DMEM/mem_reg_0_31_0_0 macro),
+DMEM/mem_reg_0_31_1_1/SP (in DMEM/mem_reg_0_31_1_1 macro),
+DMEM/mem_reg_0_31_2_2/SP (in DMEM/mem_reg_0_31_2_2 macro),
+DMEM/mem_reg_0_31_3_3/SP (in DMEM/mem_reg_0_31_3_3 macro),
+DMEM/mem_reg_0_31_4_4/SP (in DMEM/mem_reg_0_31_4_4 macro),
+DMEM/mem_reg_0_31_5_5/SP (in DMEM/mem_reg_0_31_5_5 macro),
+DMEM/mem_reg_0_31_6_6/SP (in DMEM/mem_reg_0_31_6_6 macro)
+ (the first 15 of 16 listed)
+Related violations: <none>
+
+PLHOLDVIO-2#3 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT CTRL/data_out[7]_i_3 is driving clock pin of 8 cells. This could lead to large hold time violations. Involved cells are:
+ACC/data_out_reg[0], ACC/data_out_reg[1], ACC/data_out_reg[2],
+ACC/data_out_reg[3], ACC/data_out_reg[4], ACC/data_out_reg[5],
+ACC/data_out_reg[6], ACC/data_out_reg[7]
+Related violations: <none>
+
+PLHOLDVIO-2#4 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT CTRL/instruct[6]_i_2 is driving clock pin of 6 cells. This could lead to large hold time violations. Involved cells are:
+IMEM/instruct_reg[0], IMEM/instruct_reg[1], IMEM/instruct_reg[2],
+IMEM/instruct_reg[4], IMEM/instruct_reg[5], IMEM/instruct_reg[6]
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+
