@@ -107,6 +107,9 @@ module Controller(
                  MEM_READ: begin
                     // Prepare for ALU or LDA or JMP or STO
                     case (opcode)
+                        3'b000: begin
+                            $finish;
+                        end
                         3'b001: begin // SKZ
                         state <= SKIZ;
                             pc_enable <= 1;

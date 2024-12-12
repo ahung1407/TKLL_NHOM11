@@ -3,39 +3,24 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Dec  5 22:55:35 2024
-# Process ID: 18844
-# Current directory: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17964 C:\Users\GIGABYTE\Downloads\TKLL_NHOM11-sunsik_every_except_STO\TKLL_NHOM11-sunsik_every_except_STO\doan\project_ANH_NGHI.xpr
-# Log file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/vivado.log
-# Journal file: C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan\vivado.jou
-# Running On        :DuyKhiem
+# Start of session at: Thu Dec 12 16:12:07 2024
+# Process ID: 21952
+# Current directory: D:/Minh_Hung/TKLL_NHOM11/TKLL_NHOM11-sunsik_every_except_STO/doan
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30152 D:\Minh_Hung\TKLL_NHOM11\TKLL_NHOM11-sunsik_every_except_STO\doan\project_ANH_NGHI.xpr
+# Log file: D:/Minh_Hung/TKLL_NHOM11/TKLL_NHOM11-sunsik_every_except_STO/doan/vivado.log
+# Journal file: D:/Minh_Hung/TKLL_NHOM11/TKLL_NHOM11-sunsik_every_except_STO/doan\vivado.jou
+# Running On        :DESKTOP-KJ2GVQA
 # Platform          :Windows Server 2016 or Windows 10
 # Operating System  :22631
-# Processor Detail  :11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
-# CPU Frequency     :2688 MHz
-# CPU Physical cores:6
-# CPU Logical cores :12
-# Host memory       :16948 MB
-# Swap memory       :6855 MB
-# Total Virtual     :23803 MB
-# Available Virtual :3936 MB
+# Processor Detail  :AMD Ryzen 7 8745H w/ Radeon 780M Graphics
+# CPU Frequency     :3793 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :25028 MB
+# Swap memory       :6442 MB
+# Total Virtual     :31470 MB
+# Available Virtual :14712 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/GIGABYTE/Downloads/TKLL_NHOM11-sunsik_every_except_STO/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.xpr
+open_project D:/Minh_Hung/TKLL_NHOM11/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.xpr
 update_compile_order -fileset sources_1
-launch_simulation
-source RISC_CPU_tb.tcl
-close_sim
-launch_simulation
-source RISC_CPU_tb.tcl
-close_sim
-launch_simulation
-source RISC_CPU_tb.tcl
-close_sim
-launch_simulation
-source RISC_CPU_tb.tcl
-close_sim
-launch_simulation
-source RISC_CPU_tb.tcl
-close_sim
