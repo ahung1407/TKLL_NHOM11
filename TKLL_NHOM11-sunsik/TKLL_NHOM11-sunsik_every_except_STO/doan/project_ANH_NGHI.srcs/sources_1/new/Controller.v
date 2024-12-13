@@ -131,7 +131,7 @@ module Controller(
                         dmem_enable <= 1;
                         alu_enable <= 0;
                         acc_enable <= 0;
-                        state <= LOAD_ACC;
+                        state <= ALU;
                         end
                         3'b110: begin // STO
                             state <= WRITE_BACK;
