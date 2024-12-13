@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Accumulator_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Accumulator_Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Instruction_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_CPU
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'alu_enable' is not allowed [C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:35]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'acc_enable' is not allowed [C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/RISC_CPU.v:36]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/addr_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sources_1/new/instructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Downloads/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/doan/project_ANH_NGHI.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_CPU_tb
