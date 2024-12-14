@@ -88,9 +88,6 @@ module Controller(
                     $display("State: LOAD_IR_DECODE");
                     case (opcode)
                        
-                         3'b000: begin
-                            $finish;
-                        end
                         default: begin  // include ADD, XOR, AND, LDA, JMP, STO
                         // prepare for MEM_READ
                         pc_enable <= 0;
@@ -100,7 +97,7 @@ module Controller(
                         dmem_enable <= 1;
                         alu_enable <= 0;
                         acc_enable <= 0;
-                        state <= NEED_OPCODE; // Other operations
+                        state <= NEED_OPCODE;
                         end
                     endcase
                 
@@ -128,6 +125,9 @@ module Controller(
                  MEM_READ: begin
                     // Prepare for ALU or LDA or JMP or STO
                     case (opcode)
+                      3'b000: begin
+                            $finish;
+                        end
                         3'b001: begin // SKZ
                         state <= SKIZ;
                             pc_enable <= 1;
