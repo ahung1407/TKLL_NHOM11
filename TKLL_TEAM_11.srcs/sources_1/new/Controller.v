@@ -2,7 +2,7 @@ module Controller(
     input wire clk,                 // Clock
     input wire rst,                 // Reset đồng bộ
     input wire [2:0] opcode,        // Opcode từ Instruction Register
-    input wire is_zero,             // Tín hiệu Zero từ ALU
+    //input wire is_zero,             // Tín hiệu Zero từ ALU
     output reg pc_enable,           // Điều khiển Program Counter
     output reg mux_select,          // Điều khiển Address Mux
     output reg load_ir,             // Điều khiển nạp Instruction Register
@@ -88,7 +88,7 @@ module Controller(
                     case (opcode)
                        
                          3'b000: begin
-                            $finish;
+                            $stop;
                         end
                         default: begin  // include ADD, XOR, AND, LDA, JMP, STO
                         // prepare for MEM_READ

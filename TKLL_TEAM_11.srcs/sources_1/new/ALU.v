@@ -11,19 +11,19 @@ module ALU(
         // Execute operation based on opcode
           $display("run_ALU");
         case (opcode)
-            3'b010: ALU_result = accumulator + inB;  // ADD
-            3'b011: ALU_result = accumulator & inB;  // AND
-            3'b100: ALU_result = accumulator ^ inB;
-            3'b101: ALU_result = inB;  // XOR
-            default: ALU_result = 8'bz;              // Default case (no operation)
+            3'b010: ALU_result <= accumulator + inB;  // ADD
+            3'b011: ALU_result <= accumulator & inB;  // AND
+            3'b100: ALU_result <= accumulator ^ inB;
+            3'b101: ALU_result <= inB;  // XOR
+            default: ALU_result <= 8'bz;              // Default case (no operation)
         endcase
     end
     // Always block to check if ALU_result is zero
     always @(ALU_result) begin
         if (ALU_result == 8'b0) 
-            is_zero = 1'b1;  // Set is_zero to 1 if result is zero
+            is_zero <= 1'b1;  // Set is_zero to 1 if result is zero
         else 
-            is_zero = 1'b0;  // Otherwise, set is_zero to 0
+            is_zero <= 1'b0;  // Otherwise, set is_zero to 0
     end
 
 endmodule

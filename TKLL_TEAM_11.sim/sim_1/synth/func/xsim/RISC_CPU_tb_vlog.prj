@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"RISC_CPU_tb_func_synth.v" \
+"../../../../../TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v" \
+
+# Do not sort compile order
+nosort

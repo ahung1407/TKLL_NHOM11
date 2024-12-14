@@ -1,0 +1,13 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/impl/func/xsim/RISC_CPU_tb_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-311] analyzing module Accumulator_Register
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-311] analyzing module Instruction_Register
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-311] analyzing module RISC_CPU
+INFO: [VRFC 10-311] analyzing module addr_mux
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-311] analyzing module instructionMemory
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_CPU_tb

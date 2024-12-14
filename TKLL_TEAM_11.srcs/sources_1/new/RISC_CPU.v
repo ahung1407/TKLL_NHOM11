@@ -4,31 +4,47 @@ module RISC_CPU (
 
     // Outputs for observation
     output wire [4:0] program_counter_out,  // Program Counter output
-    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
-    output wire [7:0] instruction,          // Instruction from Instruction Memory
+//    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
+//    output wire [7:0] instruction,          // Instruction from Instruction Memory
     output wire [2:0] opcode,               // Opcode from Instruction Register
-    output wire [4:0] operand_address,      // Operand address from Instruction Register
-    output wire [7:0] memory_data,          // Data read from Data Memory
-    output wire [7:0] alu_result,           // Result from ALU
-    output wire is_zero,                    // Zero flag from ALU
-    output wire [7:0] accumulator_out,      // Output from Accumulator Register
+//    output wire [4:0] operand_address,      // Operand address from Instruction Register
+//    output wire [7:0] memory_data,          // Data read from Data Memory
+//    output wire [7:0] alu_result,           // Result from ALU
+//    output wire is_zero,                    // Zero flag from ALU
+//    output wire [7:0] accumulator_out,      // Output from Accumulator Register
 
     // Control signals for observation
     output wire pc_enable,
-    output wire mux_select,
-    output wire load_register,
-    output wire wr_en,
-    output wire load_ir,
-    output wire SKZ,
-    output wire JUMP,
-    output wire LDA,
-    output wire alu_enable,
-    output wire acc_enable
+    output wire mux_select
+//    output wire load_register,
+//    output wire wr_en,
+//    output wire load_ir,
+//    output wire SKZ,
+//    output wire JUMP,
+//    output wire LDA,
+//    output wire alu_enable,
+//    output wire acc_enable
 );
 
     // Internal wires and registers
     wire [4:0] instruction_address;    // Address for Instruction Memory
      wire [7:0] dmem_data; // Inout wire for DMEM
+     wire load_register;
+    wire wr_en;
+    wire load_ir;
+    wire SKZ;
+    wire JUMP;
+    wire LDA;
+wire alu_enable;
+wire acc_enable;
+wire [4:0] operand_address;      // Operand address from Instruction Register
+wire [7:0] memory_data;          // Data read from Data Memory
+wire [7:0] alu_result;           // Result from ALU
+wire is_zero;                    // Zero flag from ALU
+wire [7:0] accumulator_out;      // Output from Accumulator Register
+wire [4:0] operand_address_out;  // Operand Address output from addr_mux
+wire [7:0] instruction;
+
     // Wires for enable signals from the Controller
     wire imem_enable;
     wire dmem_enable;

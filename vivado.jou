@@ -1,0 +1,160 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Dec 13 21:39:26 2024
+# Process ID: 25384
+# Current directory: D:/Minh_Hung/good_test_bench
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26708 D:\Minh_Hung\good_test_bench\TKLL_TEAM_11.xpr
+# Log file: D:/Minh_Hung/good_test_bench/vivado.log
+# Journal file: D:/Minh_Hung/good_test_bench\vivado.jou
+# Running On        :DESKTOP-KJ2GVQA
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 8745H w/ Radeon 780M Graphics
+# CPU Frequency     :3793 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :25028 MB
+# Swap memory       :6442 MB
+# Total Virtual     :31470 MB
+# Available Virtual :9226 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.xpr
+update_compile_order -fileset sources_1
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_methodology -name ultrafast_methodology_1
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_methodology -name ultrafast_methodology_1
+close_sim
+launch_simulation -mode post-synthesis -type timing
+report_timing
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+launch_runs impl_2 -jobs 8
+wait_on_run impl_2
+launch_simulation -mode post-implementation -type timing
+source RISC_CPU_tb.tcl
+current_design synth_1_copy_1
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+current_sim simulation_3
+close_sim
+launch_simulation -mode post-implementation -type timing
+launch_simulation -mode post-implementation -type timing
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+launch_simulation -mode post-implementation -type timing
+source RISC_CPU_tb.tcl
+launch_simulation -mode post-synthesis -type functional
+current_sim simulation_5
+close_sim
+close_sim
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-implementation -type timing
+source RISC_CPU_tb.tcl
+current_design synth_1_copy_1
+report_methodology -name ultrafast_methodology_1
+current_design impl_2
+set_property target_constrs_file D:/Minh_Hung/good_test_bench/Arty-Z7-20-Extension-board-Master.xdc [current_fileset -constrset]
+save_constraints
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+current_design synth_1_copy_1
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_timing
+report_timing_summary
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+launch_simulation
+launch_simulation -mode post-synthesis -type functional
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+launch_simulation -mode post-synthesis -type functional
+current_sim simulation_7
+close_sim
+close_sim
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_methodology -name ultrafast_methodology_1
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type functional
+launch_simulation
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type timing
+report_methodology -name ultrafast_methodology_1
+refresh_design
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+reset_run synth_1_copy_1
+launch_runs synth_1_copy_1 -jobs 8
+wait_on_run synth_1_copy_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_methodology -name ultrafast_methodology_1
+close_sim

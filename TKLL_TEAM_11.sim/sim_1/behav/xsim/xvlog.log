@@ -20,5 +20,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_T
 INFO: [VRFC 10-311] analyzing module instructionMemory
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RISC_CPU_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

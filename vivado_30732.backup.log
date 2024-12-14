@@ -1,0 +1,776 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Dec 13 13:57:40 2024
+# Process ID: 30732
+# Current directory: D:/Minh_Hung/good_test_bench
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35284 D:\Minh_Hung\good_test_bench\TKLL_TEAM_11.xpr
+# Log file: D:/Minh_Hung/good_test_bench/vivado.log
+# Journal file: D:/Minh_Hung/good_test_bench\vivado.jou
+# Running On        :DESKTOP-KJ2GVQA
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 8745H w/ Radeon 780M Graphics
+# CPU Frequency     :3793 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :25028 MB
+# Swap memory       :6442 MB
+# Total Virtual     :31470 MB
+# Available Virtual :16427 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Minh_Hung' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.gen/sources_1'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'D:/Minh_Hung/TKLL_NHOM11/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/digilent-xdc-master/Arty-Z7-20-Master.xdc'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2024.1/data/ip'.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1551.156 ; gain = 444.441
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'RISC_CPU_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'D:/Vivado/2024.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'RISC_CPU_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim/data_init.mem'
+INFO: [SIM-utils-43] Exported 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim/instruction_file.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj RISC_CPU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/Accumulator_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Accumulator_Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/Controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/Instruction_Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Instruction_Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/Program_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/RISC_CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_CPU
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'alu_enable' is not allowed [D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/RISC_CPU.v:35]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'acc_enable' is not allowed [D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/RISC_CPU.v:36]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/addr_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module addr_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/dataMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/instructionMemory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module instructionMemory
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RISC_CPU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RISC_CPU_tb_behav xil_defaultlib.RISC_CPU_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RISC_CPU_tb_behav xil_defaultlib.RISC_CPU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-5021] port 'is_zero' is not connected on this instance [D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/RISC_CPU.v:42]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/ALU.v" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/ALU.v" Line 1. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Controller
+Compiling module xil_defaultlib.Program_Counter
+Compiling module xil_defaultlib.addr_mux
+Compiling module xil_defaultlib.instructionMemory
+Compiling module xil_defaultlib.Instruction_Register
+Compiling module xil_defaultlib.dataMemory
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Accumulator_Register
+Compiling module xil_defaultlib.RISC_CPU
+Compiling module xil_defaultlib.RISC_CPU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot RISC_CPU_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "RISC_CPU_tb_behav -key {Behavioral:sim_1:Functional:RISC_CPU_tb} -tclbatch {RISC_CPU_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source RISC_CPU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Memory initialized.
+State: INIT (Reset)
+run_PC
+IR
+ACCRES_PC
+Time: 0 | PC_out: 0 | Opcode: zzz | Operand: zzzzz | Accumulator: 0 | ALU_Result: x | Instr: xx | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: INIT (Reset)
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+State: INIT
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 15000 | PC_out: 0 | Opcode: zzz | Operand: zzzzz | Accumulator: 0 | ALU_Result: x | Instr: xx | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 25000 | PC_out: 0 | Opcode: xxx | Operand: xxxxx | Accumulator: 0 | ALU_Result: x | Instr: fe | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 35000 | PC_out: 0 | Opcode: 111 | Operand: 11110 | Accumulator: 0 | ALU_Result: x | Instr: fe | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 45000 | PC_out: 0 | Opcode: 111 | Operand: 11110 | Accumulator: 0 | ALU_Result: x | Instr: fe | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 00000
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 55000 | PC_out: 30 | Opcode: 111 | Operand: 11110 | Accumulator: 0 | ALU_Result: x | Instr: fe | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 65000 | PC_out: 30 | Opcode: 111 | Operand: 11110 | Accumulator: 0 | ALU_Result: x | Instr: e3 | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 75000 | PC_out: 30 | Opcode: 111 | Operand: 00011 | Accumulator: 0 | ALU_Result: x | Instr: e3 | Data_Mem: xx | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 85000 | PC_out: 30 | Opcode: 111 | Operand: 00011 | Accumulator: 0 | ALU_Result: x | Instr: e3 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 11110
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 95000 | PC_out: 3 | Opcode: 111 | Operand: 00011 | Accumulator: 0 | ALU_Result: x | Instr: e3 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 105000 | PC_out: 3 | Opcode: 111 | Operand: 00011 | Accumulator: 0 | ALU_Result: x | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 115000 | PC_out: 3 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: x | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 135000 | PC_out: 3 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: 0 | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 145000 | PC_out: 3 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: 0 | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00011
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 155000 | PC_out: 4 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 165000 | PC_out: 4 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+Opcode: SKZ (Skip if zero)
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 175000 | PC_out: 4 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 1 | JUMP: 0
+State: SKZ
+run_PC
+PC.v: pc_enable = 1, PC_out = 00100
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 185000 | PC_out: 6 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: bb | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 195000 | PC_out: 6 | Opcode: 101 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: bb | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 205000 | PC_out: 6 | Opcode: 101 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: bb | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 225000 | PC_out: 6 | Opcode: 101 | Operand: 11011 | Accumulator: 0 | ALU_Result: 255 | Instr: bb | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 235000 | PC_out: 6 | Opcode: 101 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: bb | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 00110
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 245000 | PC_out: 7 | Opcode: 101 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 255000 | PC_out: 7 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+Opcode: SKZ (Skip if zero)
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 265000 | PC_out: 7 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 1 | JUMP: 0
+State: SKZ
+run_PC
+PC.v: pc_enable = 1, PC_out = 00111
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 275000 | PC_out: 8 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: ea | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 285000 | PC_out: 8 | Opcode: 111 | Operand: 01010 | Accumulator: 255 | ALU_Result: 255 | Instr: ea | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 305000 | PC_out: 8 | Opcode: 111 | Operand: 01010 | Accumulator: 255 | ALU_Result: 255 | Instr: ea | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 01000
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 315000 | PC_out: 10 | Opcode: 111 | Operand: 01010 | Accumulator: 255 | ALU_Result: 255 | Instr: ea | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 325000 | PC_out: 10 | Opcode: 111 | Operand: 01010 | Accumulator: 255 | ALU_Result: 255 | Instr: dc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 335000 | PC_out: 10 | Opcode: 110 | Operand: 11100 | Accumulator: 255 | ALU_Result: 255 | Instr: dc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 345000 | PC_out: 10 | Opcode: 110 | Operand: 11100 | Accumulator: 255 | ALU_Result: 255 | Instr: dc | Data_Mem: ff | Wr_En: 1 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: WRITE_BACK
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 355000 | PC_out: 10 | Opcode: 110 | Operand: 11100 | Accumulator: 255 | ALU_Result: 255 | Instr: dc | Data_Mem: ff | Wr_En: 1 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 01010
+run_MUX
+IR
+run_DATA
+IM_PC
+Time: 365000 | PC_out: 11 | Opcode: 110 | Operand: 11100 | Accumulator: 255 | ALU_Result: 255 | Instr: ba | Data_Mem: aa | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 375000 | PC_out: 11 | Opcode: 101 | Operand: 11010 | Accumulator: 255 | ALU_Result: 255 | Instr: ba | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 385000 | PC_out: 11 | Opcode: 101 | Operand: 11010 | Accumulator: 255 | ALU_Result: 255 | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 395000 | PC_out: 11 | Opcode: 101 | Operand: 11010 | Accumulator: 255 | ALU_Result: 0 | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 405000 | PC_out: 11 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: 0 | Instr: ba | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 01011
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 415000 | PC_out: 12 | Opcode: 101 | Operand: 11010 | Accumulator: 0 | ALU_Result: 0 | Instr: dc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 425000 | PC_out: 12 | Opcode: 110 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: dc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 435000 | PC_out: 12 | Opcode: 110 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: dc | Data_Mem: 00 | Wr_En: 1 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: WRITE_BACK
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ACCRES_PC
+Time: 445000 | PC_out: 12 | Opcode: 110 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: dc | Data_Mem: 00 | Wr_En: 1 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 01100
+run_MUX
+IR
+run_DATA
+IM_PC
+Time: 455000 | PC_out: 13 | Opcode: 110 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: bc | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 465000 | PC_out: 13 | Opcode: 101 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: bc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 495000 | PC_out: 13 | Opcode: 101 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: bc | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 01101
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 505000 | PC_out: 14 | Opcode: 101 | Operand: 11100 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 515000 | PC_out: 14 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+Opcode: SKZ (Skip if zero)
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 525000 | PC_out: 14 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 1 | JUMP: 0
+State: SKZ
+run_PC
+PC.v: pc_enable = 1, PC_out = 01110
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 535000 | PC_out: 16 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 9b | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 545000 | PC_out: 16 | Opcode: 100 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: 9b | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 555000 | PC_out: 16 | Opcode: 100 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 575000 | PC_out: 16 | Opcode: 100 | Operand: 11011 | Accumulator: 0 | ALU_Result: 255 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 585000 | PC_out: 16 | Opcode: 100 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 10000
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 595000 | PC_out: 17 | Opcode: 100 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 605000 | PC_out: 17 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+Opcode: SKZ (Skip if zero)
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 615000 | PC_out: 17 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 1 | JUMP: 0
+State: SKZ
+run_PC
+PC.v: pc_enable = 1, PC_out = 10001
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 625000 | PC_out: 18 | Opcode: 001 | Operand: 00000 | Accumulator: 255 | ALU_Result: 255 | Instr: f4 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 635000 | PC_out: 18 | Opcode: 111 | Operand: 10100 | Accumulator: 255 | ALU_Result: 255 | Instr: f4 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 655000 | PC_out: 18 | Opcode: 111 | Operand: 10100 | Accumulator: 255 | ALU_Result: 255 | Instr: f4 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 1 | SKZ: 0 | JUMP: 1
+State: JUMP
+run_PC
+PC.v: pc_enable = 1, PC_out = 10010
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 665000 | PC_out: 20 | Opcode: 111 | Operand: 10100 | Accumulator: 255 | ALU_Result: 255 | Instr: f4 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 675000 | PC_out: 20 | Opcode: 111 | Operand: 10100 | Accumulator: 255 | ALU_Result: 255 | Instr: 9b | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 685000 | PC_out: 20 | Opcode: 100 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: 9b | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 695000 | PC_out: 20 | Opcode: 100 | Operand: 11011 | Accumulator: 255 | ALU_Result: 255 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+ALU
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+Time: 705000 | PC_out: 20 | Opcode: 100 | Operand: 11011 | Accumulator: 255 | ALU_Result: 0 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_ACC
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+run_ALU
+ACCRES_PC
+Time: 715000 | PC_out: 20 | Opcode: 100 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: 9b | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+PC.v: pc_enable = 1, PC_out = 10100
+run_MUX
+IR
+run_DATA
+ACCRES_PC
+IM_PC
+Time: 725000 | PC_out: 21 | Opcode: 100 | Operand: 11011 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 735000 | PC_out: 21 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: ff | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+Opcode: SKZ (Skip if zero)
+MEM_READ
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 745000 | PC_out: 21 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 20 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 1 | SKZ: 1 | JUMP: 0
+State: SKZ
+run_PC
+PC.v: pc_enable = 1, PC_out = 10101
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 755000 | PC_out: 23 | Opcode: 001 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 00 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 1 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: FETCH
+run_PC
+run_MUX
+IR
+IM_PC
+run_DATA
+Time: 765000 | PC_out: 23 | Opcode: 000 | Operand: 00000 | Accumulator: 0 | ALU_Result: 0 | Instr: 00 | Data_Mem: 00 | Wr_En: 0 | Mux_Sel: 0 | PC_En: 0 | SKZ: 0 | JUMP: 0
+State: LOAD_IR_DECODE
+$finish called at time : 775 ns : File "D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sources_1/new/Controller.v" Line 91
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'RISC_CPU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1623.758 ; gain = 50.773
+The simulator has terminated in an unexpected manner with exit code 1073807364.  Please review the simulation log (xsim.log) for details.

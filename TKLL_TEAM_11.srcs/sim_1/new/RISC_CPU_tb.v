@@ -33,30 +33,30 @@ module RISC_CPU_tb;
         .clk(clk),
         .rst(rst),
         .program_counter_out(program_counter_out),
-        .operand_address_out(operand_address_out),
-        .instruction(instruction),
+//        .operand_address_out(operand_address_out),
+//        .instruction(instruction),
         .opcode(opcode),
-        .operand_address(operand_address),
-        .memory_data(memory_data),
-        .alu_result(alu_result),
-        .is_zero(is_zero),
-        .accumulator_out(accumulator_out),
+//        .operand_address(operand_address),
+//        .memory_data(memory_data),
+//        .alu_result(alu_result),
+//        .is_zero(is_zero),
+//        .accumulator_out(accumulator_out),
         .pc_enable(pc_enable),
-        .mux_select(mux_select),
-        .load_register(load_register),
-        .wr_en(wr_en),
-        .load_ir(load_ir),
-        .SKZ(SKZ),
-        .JUMP(JUMP),
-        .LDA(LDA),
-        .alu_enable(alu_enable),
-        .acc_enable(acc_enable)
+        .mux_select(mux_select)
+//        .load_register(load_register),
+//        .wr_en(wr_en),
+//        .load_ir(load_ir),
+//        .SKZ(SKZ),
+//        .JUMP(JUMP),
+//        .LDA(LDA),
+//        .alu_enable(alu_enable),
+//        .acc_enable(acc_enable)
     );
 
     // Clock generation (10ns clock period)
     initial begin
         clk = 0;
-        forever #5 clk = ~clk; // Clock with 10ns period
+        forever #10 clk = ~clk; // Clock with 10ns period
     end
 
     // Test sequence

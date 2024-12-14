@@ -1,0 +1,6 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.sim/sim_1/impl/func/xsim/RISC_CPU_tb_func_impl.v,1734100084,verilog,,D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v,,ALU;Accumulator_Register;Controller;Instruction_Register;Program_Counter;RISC_CPU;addr_mux;dataMemory;glbl;instructionMemory,,,,,,,,
+D:/Minh_Hung/good_test_bench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v,1734098207,verilog,,,,RISC_CPU_tb,,,,,,,,
