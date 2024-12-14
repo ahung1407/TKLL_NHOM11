@@ -1,0 +1,26 @@
+Time resolution is 1 ps
+Memory initialized.
+Time: 0 | PC_out: x | Opcode: xxx | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: x | PC_En: x | SKZ: z | JUMP: z
+Time: 0 | PC_out: 0 | Opcode: 000 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 105000 | PC_out: 0 | Opcode: 000 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 115000 | PC_out: 0 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 145000 | PC_out: 0 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 155000 | PC_out: 30 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 165000 | PC_out: 30 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 195000 | PC_out: 30 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 205000 | PC_out: 3 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 215000 | PC_out: 3 | Opcode: 111 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 235000 | PC_out: 3 | Opcode: 101 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 265000 | PC_out: 3 | Opcode: 101 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 275000 | PC_out: 4 | Opcode: 101 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 325000 | PC_out: 4 | Opcode: 101 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 335000 | PC_out: 5 | Opcode: 101 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 355000 | PC_out: 5 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 365000 | PC_out: 5 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 375000 | PC_out: 7 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 385000 | PC_out: 7 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 395000 | PC_out: 7 | Opcode: 000 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 405000 | PC_out: 7 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 425000 | PC_out: 7 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 1 | SKZ: z | JUMP: z
+Time: 435000 | PC_out: 9 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 1 | PC_En: 0 | SKZ: z | JUMP: z
+Time: 445000 | PC_out: 9 | Opcode: 001 | Operand: zzzzz | Accumulator: z | ALU_Result: z | Instr: zz | Data_Mem: zz | Wr_En: z | Mux_Sel: 0 | PC_En: 

@@ -1,0 +1,6 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench/TKLL_TEAM_11.sim/sim_1/synth/timing/xsim/RISC_CPU_tb_time_synth.v,1734140475,verilog,,C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v,,ALU;Accumulator_Register;Controller;Instruction_Register;Program_Counter;RAM32X1S_HD10;RAM32X1S_HD11;RAM32X1S_HD12;RAM32X1S_HD13;RAM32X1S_HD14;RAM32X1S_HD8;RAM32X1S_HD9;RAM32X1S_UNIQ_BASE_;RISC_CPU;addr_mux;dataMemory;glbl;instructionMemory,,,,,,,,
+C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench/TKLL_TEAM_11.srcs/sim_1/new/RISC_CPU_tb.v,1734073204,verilog,,,,RISC_CPU_tb,,,,,,,,

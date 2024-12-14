@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Dec 14 07:40:38 2024
+# Process ID: 3708
+# Current directory: C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15340 C:\Users\Minh_Hung\Downloads\TKLL_NHOM11-good_testbench\TKLL_TEAM_11.xpr
+# Log file: C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench/vivado.log
+# Journal file: C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench\vivado.jou
+# Running On        :DESKTOP-KJ2GVQA
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 7 8745H w/ Radeon 780M Graphics
+# CPU Frequency     :3793 MHz
+# CPU Physical cores:8
+# CPU Logical cores :16
+# Host memory       :25028 MB
+# Swap memory       :6442 MB
+# Total Virtual     :31470 MB
+# Available Virtual :20384 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Minh_Hung/Downloads/TKLL_NHOM11-good_testbench/TKLL_TEAM_11.xpr
+update_compile_order -fileset sources_1
+set_property board_part digilentinc.com:arty-z7-20:part0:1.1 [current_project]
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation
+source RISC_CPU_tb.tcl
+export_ip_user_files -of_objects  [get_files C:/Users/Minh_Hung/Downloads/TKLL_NHOM11/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/digilent-xdc-master/Arty-Z7-20-Master.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/Minh_Hung/Downloads/TKLL_NHOM11/TKLL_NHOM11-sunsik/TKLL_NHOM11-sunsik_every_except_STO/digilent-xdc-master/Arty-Z7-20-Master.xdc
+add_files -fileset constrs_1 -norecurse D:/Minh_Hung/good_test_bench/Arty-Z7-20-Extension-board-Master.xdc
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_methodology -name ultrafast_methodology_1
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type timing
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type timing
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+set_property target_constrs_file D:/Minh_Hung/good_test_bench/Arty-Z7-20-Extension-board-Master.xdc [current_fileset -constrset]
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type timing
+source RISC_CPU_tb.tcl
+report_timing
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+launch_simulation -mode post-synthesis -type functional
+source RISC_CPU_tb.tcl
+synth_design -top RISC_CPU -part xc7z020clg400-1 -lint 
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+current_design synth_1
+synth_design -top RISC_CPU -part xc7z020clg400-1 -lint 
+current_design rtl_1
+report_methodology -name ultrafast_methodology_1
+reset_run synth_1
+current_design synth_1
+save_constraints -force
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+source RISC_CPU_tb.tcl
+close_sim
+save_constraints
+current_sim simulation_13
+launch_simulation -mode post-synthesis -type functional
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+close_design
+launch_simulation -mode post-synthesis -type functional
+source RISC_CPU_tb.tcl
+close_sim
+launch_simulation -mode post-synthesis -type functional
+current_sim simulation_13
+close_sim
+close_sim
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_methodology -name ultrafast_methodology_1
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_2
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+launch_simulation -mode post-synthesis -type functional
+source RISC_CPU_tb.tcl
+synth_design -top RISC_CPU -part xc7z020clg400-1 -lint 
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+current_design synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_sim
+close_design
+launch_simulation -mode post-synthesis -type functional
+source RISC_CPU_tb.tcl
