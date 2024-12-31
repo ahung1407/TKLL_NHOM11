@@ -27,7 +27,8 @@ module Controller(
                MEM_READ    = 4'b0101,
                LOAD_IR_DECODE = 4'b0110,
                SKIZ = 4'b0111,
-               JUMP = 4'b1000;
+               JUMP = 4'b1000,
+               NEED_OPCODE = 4'b1001;
                
 
 
@@ -88,7 +89,28 @@ module Controller(
                     case (opcode)
                        
                          3'b000: begin
-                            $stop;
+                            $finish;
+                        end
+                        default: begin  // include ADD, XOR, AND, LDA, JMP, STO
+                        // prepare for MEM_READ
+                        pc_enable <= 0;
+                        mux_select <= 0;
+                        imem_enable <= 1;
+                        load_ir <= 1;
+                        dmem_enable <= 1;
+                        alu_enable <= 0;
+                        acc_enable <= 0;
+                        state <= NEED_OPCODE; // Other operations
+                        end
+                    endcase
+                
+                end
+                NEED_OPCODE: begin
+
+                    case (opcode)
+                       
+                         3'b000: begin
+                            $finish;
                         end
                         default: begin  // include ADD, XOR, AND, LDA, JMP, STO
                         // prepare for MEM_READ
@@ -102,7 +124,6 @@ module Controller(
                         state <= MEM_READ; // Other operations
                         end
                     endcase
-                
                 end
                  MEM_READ: begin
                     // Prepare for ALU or LDA or JMP or STO
@@ -119,7 +140,7 @@ module Controller(
                             wr_en <= 0;
                          
                             load_register <= 0;
-                            SKZ <= 1; // Skip if zero
+                            SKZ = 1; // Skip if zero
                             $display("Opcode: SKZ (Skip if zero)");
                         end
                         3'b101: begin // LDA
@@ -129,7 +150,7 @@ module Controller(
                         load_ir <= 1;
                         LDA <= 0;
                         dmem_enable <= 1;
-                        alu_enable <= 0;
+                        alu_enable <= 1;
                         acc_enable <= 0;
                         state <= ALU;
                         end

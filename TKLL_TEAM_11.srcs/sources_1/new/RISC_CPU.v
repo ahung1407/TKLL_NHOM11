@@ -4,53 +4,33 @@ module RISC_CPU (
 
     // Outputs for observation
     output wire [4:0] program_counter_out,  // Program Counter output
-//    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
-//    output wire [7:0] instruction,          // Instruction from Instruction Memory
+    output wire [4:0] operand_address_out,  // Operand Address output from addr_mux
+    output wire [7:0] instruction,          // Instruction from Instruction Memory
     output wire [2:0] opcode,               // Opcode from Instruction Register
-//    output wire [4:0] operand_address,      // Operand address from Instruction Register
-//    output wire [7:0] memory_data,          // Data read from Data Memory
-//    output wire [7:0] alu_result,           // Result from ALU
-//    output wire is_zero,                    // Zero flag from ALU
-//    output wire [7:0] accumulator_out,      // Output from Accumulator Register
+    output wire [4:0] operand_address,      // Operand address from Instruction Register
+    output wire [7:0] memory_data,          // Data read from Data Memory
+    output wire [7:0] alu_result,           // Result from ALU
+    output wire is_zero,                    // Zero flag from ALU
+    output wire [7:0] accumulator_out,      // Output from Accumulator Register
 
     // Control signals for observation
     output wire pc_enable,
-    output wire mux_select
-//    output wire load_register,
-//    output wire wr_en,
-//    output wire load_ir,
-//    output wire SKZ,
-//    output wire JUMP,
-//    output wire LDA,
-//    output wire alu_enable,
-//    output wire acc_enable
+    output wire mux_select,
+    output wire load_register,
+    output wire wr_en,
+    output wire load_ir,
+    output wire SKZ,
+    output wire JUMP,
+    output wire LDA,
+    output wire alu_enable,
+    output wire acc_enable
 );
 
     // Internal wires and registers
     wire [4:0] instruction_address;    // Address for Instruction Memory
      wire [7:0] dmem_data; // Inout wire for DMEM
-     wire load_register;
-    wire wr_en;
-    wire load_ir;
-    wire SKZ;
-    wire JUMP;
-    wire LDA;
-wire alu_enable;
-wire acc_enable;
-wire [4:0] operand_address;      // Operand address from Instruction Register
-wire [7:0] memory_data;          // Data read from Data Memory
-wire [7:0] alu_result;           // Result from ALU
-wire is_zero;                    // Zero flag from ALU
-wire [7:0] accumulator_out;      // Output from Accumulator Register
-wire [4:0] operand_address_out;  // Operand Address output from addr_mux
-wire [7:0] instruction;
-
-    // Wires for enable signals from the Controller
-    wire imem_enable;
+wire imem_enable;
     wire dmem_enable;
-    wire alu_enable;
-    wire acc_enable;
-    
    // Memory data handling (inout)
     assign dmem_data = (wr_en) ? accumulator_out : 8'bz; // Write to DMEM
     assign memory_data = dmem_data;                      // Read from DMEM
@@ -97,7 +77,8 @@ wire [7:0] instruction;
     
     // Instruction Memory with enable
     instructionMemory IMEM (
-        .clk(clk & imem_enable),  // Enable Instruction Memory
+        .clk(clk),  // Enable Instruction Memory
+        .imem_enable(imem_enable),
         .addr(instruction_address),
         .instruct(instruction)
     );
@@ -114,7 +95,8 @@ wire [7:0] instruction;
     
     // Data Memory with enable
     dataMemory DMEM (
-        .clk(clk & dmem_enable),  // Enable Data Memory
+        .clk(clk),
+        .dmem_enable(dmem_enable),
         .addr(operand_address_out),
         .data(dmem_data), // accumulator out
         .wr_en(wr_en)
@@ -122,7 +104,8 @@ wire [7:0] instruction;
     
     // ALU with enable
     ALU ALU (
-        .clk(clk & alu_enable),   // Enable ALU
+        .clk(clk),   // Enable ALU
+        .alu_enable(alu_enable),
         .opcode(opcode),
         .inB(memory_data),
         .accumulator(accumulator_out),
@@ -132,8 +115,9 @@ wire [7:0] instruction;
     
     // Accumulator Register with enable
     Accumulator_Register ACC (
-        .clk(clk & acc_enable),   // Enable Accumulator Register
+        .clk(clk),   // Enable Accumulator Register
         .reset(rst),
+        .acc_enable(acc_enable),
         .load_register(load_register),
         .LDA(LDA),
         .data_in(alu_result),

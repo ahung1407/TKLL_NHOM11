@@ -29,34 +29,34 @@ module RISC_CPU_tb;
     wire alu_enable;
     wire acc_enable;
     // Instantiate the RISC_CPU module
+    // Instantiate the RISC_CPU module
     RISC_CPU uut (
         .clk(clk),
         .rst(rst),
         .program_counter_out(program_counter_out),
-//        .operand_address_out(operand_address_out),
-//        .instruction(instruction),
+        .operand_address_out(operand_address_out),
+        .instruction(instruction),
         .opcode(opcode),
-//        .operand_address(operand_address),
-//        .memory_data(memory_data),
-//        .alu_result(alu_result),
-//        .is_zero(is_zero),
-//        .accumulator_out(accumulator_out),
+        .operand_address(operand_address),
+        .memory_data(memory_data),
+        .alu_result(alu_result),
+        .is_zero(is_zero),
+        .accumulator_out(accumulator_out),
         .pc_enable(pc_enable),
-        .mux_select(mux_select)
-//        .load_register(load_register),
-//        .wr_en(wr_en),
-//        .load_ir(load_ir),
-//        .SKZ(SKZ),
-//        .JUMP(JUMP),
-//        .LDA(LDA),
-//        .alu_enable(alu_enable),
-//        .acc_enable(acc_enable)
+        .mux_select(mux_select),
+        .load_register(load_register),
+        .wr_en(wr_en),
+        .load_ir(load_ir),
+        .SKZ(SKZ),
+        .JUMP(JUMP),
+        .LDA(LDA),
+        .alu_enable(alu_enable),
+        .acc_enable(acc_enable)
     );
-
     // Clock generation (10ns clock period)
     initial begin
         clk = 0;
-        forever #10 clk = ~clk; // Clock with 10ns period
+        forever #5 clk = ~clk; // Clock with 10ns period
     end
 
     // Test sequence
@@ -74,13 +74,16 @@ module RISC_CPU_tb;
         // Finish simulation after some time
         $finish;
     end
-
+   
     // Monitor outputs
-    initial begin
-        $monitor("Time: %0t | PC_out: %0d | Opcode: %b | Operand: %b | Accumulator: %0d | ALU_Result: %0d | Instr: %h | Data_Mem: %h | Wr_En: %b | Mux_Sel: %b | PC_En: %b | SKZ: %b | JUMP: %b",
-                 $time, program_counter_out, opcode, operand_address, accumulator_out, alu_result, instruction,
-                 memory_data, wr_en, mux_select, pc_enable, SKZ, JUMP);
-    end
+initial begin
+    $monitor("Time: %0t | PC_out: %0d | Opcode: %b | Operand: %b | Instr: %h | Data_Mem: %h | ALU_Result: %0d | Accumulator: %0d | Is_Zero: %b | Wr_En: %b | Mux_Sel: %b | PC_En: %b | Load_Reg: %b | Load_IR: %b | SKZ: %b | JUMP: %b | LDA: %b | ALU_En: %b | Acc_En: %b",
+             $time, 
+             program_counter_out, opcode, operand_address, instruction, memory_data, 
+             alu_result, accumulator_out, is_zero, wr_en, mux_select, pc_enable, 
+             load_register, load_ir, SKZ, JUMP, LDA, alu_enable, acc_enable);
+end
+
 
     // Initialize memory with test data (Optional)
     initial begin

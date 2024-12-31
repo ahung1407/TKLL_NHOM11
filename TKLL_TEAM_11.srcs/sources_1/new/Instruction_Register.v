@@ -37,7 +37,10 @@ module Instruction_Register (
             operand_address <= 5'bzzzz;
         end else if (load_instruct) begin
             // Load data from instruct_in to outputs
-            opcode <= instruct_in[7:5];          // Upper 3 bits are the opcode
+            opcode[7] <= instruct_in[7];
+            opcode[6] <= instruct_in[6];
+            opcode[5] <= instruct_in[5];
+                      // Upper 3 bits are the opcode
             operand_address <= instruct_in[4:0]; // Lower 5 bits are the operand address
         end
         // If load_instruct is low, retain previous values

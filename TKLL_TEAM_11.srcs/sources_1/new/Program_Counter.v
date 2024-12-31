@@ -21,13 +21,13 @@ module Program_Counter (
 
             if (SKZ && iszero) begin
                 // Skip the next instruction if SKZ is high and the ALU result is zero
-                PC_out <= PC_out + 5'b00010;
+                PC_out = PC_out + 5'b00010;
             end else if (JUMP) begin
                 // Jump to the specified address if JUMP is high
                 PC_out <= PC_jump_addr;
             end else begin
                 // Default increment by 1 for normal instruction execution
-                PC_out <= PC_out + 5'b00001;
+                PC_out = PC_out + 5'b00001;
             end
         end
         // If pc_enable is low, the program counter holds its value
